@@ -3,6 +3,7 @@ from enum import IntEnum, unique
 
 @unique
 class Sounds(IntEnum):
+    """Music sounds"""
     C = 1
     CIS = 2
     D = 3
