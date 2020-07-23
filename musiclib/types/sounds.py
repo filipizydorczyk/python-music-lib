@@ -1,7 +1,8 @@
-from enum import Enum
+from enum import IntEnum, unique
 
 
-class Sounds(Enum):
+@unique
+class Sounds(IntEnum):
     C = 1
     CIS = 2
     D = 3

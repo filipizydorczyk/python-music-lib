@@ -1,1 +1,1 @@
-import musiclib
+from musiclib import Sounds
