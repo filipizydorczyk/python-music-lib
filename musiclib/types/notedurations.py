@@ -10,6 +10,18 @@ class NoteDurations(IntEnum):
     SIXTEENTH_NOTE = 16
     THIRTYSECOND_NOTE = 32
 
+    @staticmethod
+    def getNoteDurationsFromFloat(x):
+        i = int(x ** -1)
+        result = None
+
+        try:
+            result = NoteDurations(i)
+        except ValueError:
+            result = None
+
+        return result
+
     def __float__(self):
         return 1.0 / int(self)
 
@@ -26,7 +38,13 @@ class NoteDurations(IntEnum):
         return float(self) > float(other)
 
     def __eq__(self, other):
-        return float(self) == float(other)
+        if other == None:
+            float(self) == other
+        else:
+            return float(self) == float(other)
 
     def __ne__(self, other):
-        return float(self) != float(other)
+        if other == None:
+            float(self) != other
+        else:
+            return float(self) != float(other)

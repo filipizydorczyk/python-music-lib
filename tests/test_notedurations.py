@@ -67,6 +67,8 @@ class SoundsTest(unittest.TestCase):
         assert NoteDurations.THIRTYSECOND_NOTE == NoteDurations.THIRTYSECOND_NOTE
         assert (NoteDurations.SIXTEENTH_NOTE ==
                 NoteDurations.THIRTYSECOND_NOTE) == False
+        # assert (NoteDurations.SIXTEENTH_NOTE ==
+        #         None) == False
 
     def correct_ne_comparing_test(self):
         printTestHeader("NoteDaurations Test", "correct_ne_comparing_test")
@@ -77,6 +79,18 @@ class SoundsTest(unittest.TestCase):
         assert NoteDurations.THIRTYSECOND_NOTE != NoteDurations.SIXTEENTH_NOTE
         assert (NoteDurations.SIXTEENTH_NOTE !=
                 NoteDurations.SIXTEENTH_NOTE) == False
+        # assert NoteDurations.THIRTYSECOND_NOTE != None
+
+    def getting_duartion_from_float_success_test(self):
+        printTestHeader("NoteDaurations Test",
+                        "getting_duartion_from_float_success_test")
+        assert NoteDurations.getNoteDurationsFromFloat(
+            0.125) == NoteDurations.EIGHTH_NOTE
+
+    def getting_duartion_from_float_failed_test(self):
+        printTestHeader("NoteDaurations Test",
+                        "getting_duartion_from_float_failed_test")
+        assert NoteDurations.getNoteDurationsFromFloat(0.126) == None
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 from musiclib import Sounds
 from musiclib import NoteDurations
+from musiclib import Note
 
 
 class Bcolors:

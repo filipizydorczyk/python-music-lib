@@ -9,6 +9,7 @@ class SoundsTest(unittest.TestCase):
 
     def correct_values_test(self):
         printTestHeader("SoundsTest", "correct_values_test")
+        assert int(Sounds.REST) == 0
         assert int(Sounds.C) == 1
         assert int(Sounds.CIS) == 2
         assert int(Sounds.D) == 3
