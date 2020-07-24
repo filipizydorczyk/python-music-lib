@@ -39,12 +39,12 @@ class NoteDurations(IntEnum):
 
     def __eq__(self, other):
         if other == None:
-            float(self) == other
+            return float(self) == other
         else:
             return float(self) == float(other)
 
     def __ne__(self, other):
         if other == None:
-            float(self) != other
+            return float(self) != other
         else:
             return float(self) != float(other)
