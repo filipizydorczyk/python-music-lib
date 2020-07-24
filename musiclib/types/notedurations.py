@@ -12,3 +12,21 @@ class NoteDurations(IntEnum):
 
     def __float__(self):
         return 1.0 / int(self)
+
+    def __le__(self, other):
+        return float(self) <= float(other)
+
+    def __lt__(self, other):
+        return float(self) < float(other)
+
+    def __ge__(self, other):
+        return float(self) >= float(other)
+
+    def __gt__(self, other):
+        return float(self) > float(other)
+
+    def __eq__(self, other):
+        return float(self) == float(other)
+
+    def __ne__(self, other):
+        return float(self) != float(other)

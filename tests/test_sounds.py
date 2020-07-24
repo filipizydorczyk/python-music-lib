@@ -1,4 +1,4 @@
-from .context import Sounds
+from .context import Sounds, printTestHeader
 
 import unittest
 
@@ -8,6 +8,7 @@ class SoundsTest(unittest.TestCase):
     """Basic test cases."""
 
     def correct_values_test(self):
+        printTestHeader("SoundsTest", "correct_values_test")
         assert int(Sounds.C) == 1
         assert int(Sounds.CIS) == 2
         assert int(Sounds.D) == 3
