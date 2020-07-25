@@ -50,4 +50,8 @@ class Intervals(IntEnum):
 
     @staticmethod
     def getIntervalBySemitones(semitones: int):
+        """
+        Static method that returns Interval adequate to given semitone numners
+        Semitone is int i <0;12>
+        """
         return Intervals(semitones)
