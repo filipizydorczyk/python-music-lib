@@ -16,16 +16,16 @@ class Note:
         self.__sound = sound
         self.__duration = float(duration)
 
-    def get_octave(self):
+    def get_octave(self) -> int:
         return self.__octave
 
-    def set_octave(self, x):
+    def set_octave(self, x: int):
         self.__octave = x
 
-    def get_sound(self):
+    def get_sound(self) -> Sounds:
         return self.__sound
 
-    def set_sound(self, x):
+    def set_sound(self, x: Sounds):
         self.__sound = x
 
     def get_duration(self):
@@ -35,5 +35,5 @@ class Note:
         else:
             return enm
 
-    def set_duration(self, x):
+    def set_duration(self, x: NoteDurations):
         self.__duration = x
