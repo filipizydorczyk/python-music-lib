@@ -1,3 +1,4 @@
+from __future__ import annotations
 from enum import IntEnum
 
 
@@ -49,7 +50,7 @@ class Intervals(IntEnum):
     AUGMENTED_SEVENTH = 12
 
     @staticmethod
-    def getIntervalBySemitones(semitones: int):
+    def getIntervalBySemitones(semitones: int) -> Interval:
         """
         Static method that returns Interval adequate to given semitone numners
         Semitone is int i <0;12>
