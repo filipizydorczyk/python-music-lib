@@ -37,6 +37,7 @@ C -> Dis is 3 semitones
 #### getIntervalsSemitone
 
 ```py
+@staticmethod
 def getIntervalBySemitones(semitones: int):
 ```
 
@@ -44,5 +45,8 @@ Static method that returns Interval adequate to given semitone numners
 Semitone is int i <0;12>
 
 ```py
-Intervals.getIntervalBySemitones(3)
+from musiclib import NoteDurations
+
+assert NoteDurations.getNoteDurationsFromFloat(0.125) == NoteDurations.EIGHTH_NOTE
+assert NoteDurations.getNoteDurationsFromFloat(0.126) == None
 ```

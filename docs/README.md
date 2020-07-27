@@ -1,6 +1,7 @@
 ### Reference Guide
 
-    - note
-    - intervals
-    - notedurations
-    - sounds
+#### Types
+
+[Sound](./types/SOUNDS.md)
+[Intervals](./types/INTERVALS.md)
+[Note durations](./types/NOTEDURATIONS.md)
