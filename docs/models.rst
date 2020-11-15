@@ -1,8 +1,5 @@
-musiclib package
+Models
 ================
-
-Module contents
----------------
 
 .. automodule:: musiclib
    :members:
@@ -24,7 +21,5 @@ Note
    :show-inheritance:
 
 
-.. automodule:: musiclib.types
-   :members:
-   :undoc-members:
-   :show-inheritance:
+
+
