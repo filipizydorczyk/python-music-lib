@@ -23,6 +23,14 @@ Pitch
    :undoc-members:
    :show-inheritance:
 
+Chord
+----------------------------
+
+.. automodule:: musiclib.models.chord
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 
 
