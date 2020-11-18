@@ -8,4 +8,3 @@ from .types.chords import Chords
 # Models
 
 from .models.note import Note
-from .models.chords.majorchord import MajorChord

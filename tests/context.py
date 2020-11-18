@@ -2,7 +2,6 @@ from musiclib import Sounds
 from musiclib import NoteDurations
 from musiclib import Note
 from musiclib import Intervals
-from musiclib import MajorChord
 from musiclib import Chords
 
 
