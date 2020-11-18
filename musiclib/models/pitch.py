@@ -15,8 +15,18 @@ class Pitch:
         self.__sound = sound
         self.__octave = octave
 
-    def get_sound(self):
+    def get_sound(self) -> Sounds:
+        """ returns Sound type of given pitch
+
+        Returns:
+            Sounds: Sound type of given pitch
+        """
         return self.__sound
 
-    def get_octave(self):
+    def get_octave(self) -> int:
+        """returns octave of given pitch
+
+        Returns:
+            int: octave of given pitch
+        """
         return self.__octave
