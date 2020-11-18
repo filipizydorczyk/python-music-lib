@@ -1,4 +1,0 @@
-{
-    "pythonTestExplorer.testFramework": "pytest",
-    "restructuredtext.confPath": "${workspaceFolder}/docs"
-}
