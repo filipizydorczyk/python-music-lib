@@ -6,4 +6,5 @@ python-music-lib
 
    models
    types
+   collections
    utils

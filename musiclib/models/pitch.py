@@ -1,3 +1,5 @@
+from __future__ import annotations
+from musiclib.types.intervals import Intervals
 from musiclib.types.sounds import Sounds
 
 
@@ -30,3 +32,7 @@ class Pitch:
             int: octave of given pitch
         """
         return self.__octave
+
+    def add(interval: Intervals) -> Pitch:
+        octaves = int(interval) // 12
+        semitones = int(interval) % 12
