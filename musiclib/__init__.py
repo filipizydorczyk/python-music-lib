@@ -8,3 +8,4 @@ from .types.chords import Chords
 # Models
 
 from .models.note import Note
+from .models.pitch import Pitch

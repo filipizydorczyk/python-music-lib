@@ -33,6 +33,10 @@ class Pitch:
         """
         return self.__octave
 
-    def add(interval: Intervals) -> Pitch:
+    def add(self, interval: Intervals) -> Pitch:
         octaves = int(interval) // 12
         semitones = int(interval) % 12
+
+        new_sound = self.__sound.add(semitones)
+        new_octave = self.__octave + octaves
+        return Pitch(new_sound, new_octave)

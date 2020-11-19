@@ -21,6 +21,7 @@ def test_correct_values():
 
 def test_adding_semitones():
     sound = Sounds.C
+    assert sound.add(0) == Sounds.C
     assert sound.add(2) == Sounds.D
     assert sound.add(3) == Sounds.DIS
     assert sound.add(6) == Sounds.FIS
