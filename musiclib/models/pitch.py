@@ -34,9 +34,18 @@ class Pitch:
         return self.__octave
 
     def add(self, interval: Intervals) -> Pitch:
+        """adds to note given interval
+
+        :param interval: Intervals enum to add to note. Can be also int as semitones 
+        :type interval: Intervals
+        :return: new instance of Pitch after added interveal
+        :rtype: Pitch
+        """
         octaves = int(interval) // 12
         semitones = int(interval) % 12
 
         new_sound = self.__sound.add(semitones)
         new_octave = self.__octave + octaves
+        if(new_sound < self.__sound):
+            new_octave += 1
         return Pitch(new_sound, new_octave)
