@@ -27,11 +27,10 @@ class Sounds(IntEnum):
             So if you add 13 you move from C to C#. You will never recive REST enum from
             actual notes like C,D,E etc. If you attepmt to add steps to REST it will stay rest anyway.
 
-        Args:
-            semitones (int): how many steps u want to move your sound
-
-        Returns:
-            Sounds: new instance of sound after added given steps
+        :param semitones: how many steps u want to move your sound
+        :type semitones: int
+        :return: new instance of sound after added given steps
+        :rtype: Sounds
         """
         if(self.value == Sounds.REST):
             return Sounds.REST

@@ -9,9 +9,10 @@ class Chord:
     def __init__(self, pitches: list, duration):
         """creates new instance of Chord
 
-        Args:
-            pitches (list): list of chords Pitch'es
-            duration (NoteDurations or float): it can be either float or notedurations enum. Object will store this information as float 
+        :param pitches: list of chords Pitch'es
+        :type pitches: list
+        :param duration: it can be either float or notedurations enum. Object will store this information as float
+        :type duration: NoteDurations or float
         """
         self.__pitches = pitches
         self.__duration = duration
@@ -19,15 +20,15 @@ class Chord:
     def get_pitches(self) -> list:
         """get Pitch'es list of chord
 
-        Returns:
-            list: list of Pitch elements
+        :return: list of Pitch elements
+        :rtype: list
         """
         return self.__pitches
 
     def get_duration(self) -> float:
         """get chord durations
 
-        Returns:
-            float: returns note duration in float, if duration was provided as NoteDurations enum it can be converted back
+        :return: returns note duration in float, if duration was provided as NoteDurations enum it can be converted back
+        :rtype: float
         """
         return self.__duration

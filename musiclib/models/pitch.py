@@ -10,26 +10,27 @@ class Pitch:
     def __init__(self, sound: Sounds, octave: int):
         """constructor
 
-        Args:
-            sound (Sounds): sound of pitch (A,B,C,C# et.)
-            octave (int): octve given as a number
+        :param sound: sound of pitch (A,B,C,C# et.)
+        :type sound: Sounds
+        :param octave: octve given as a number
+        :type octave: int
         """
         self.__sound = sound
         self.__octave = octave
 
     def get_sound(self) -> Sounds:
-        """ returns Sound type of given pitch
+        """returns Sound type of given pitch
 
-        Returns:
-            Sounds: Sound type of given pitch
+        :return: Sound type of given pitch
+        :rtype: Sounds
         """
         return self.__sound
 
     def get_octave(self) -> int:
         """returns octave of given pitch
 
-        Returns:
-            int: octave of given pitch
+        :return: octave of given pitch
+        :rtype: int
         """
         return self.__octave
 

@@ -1,3 +1,4 @@
+from __future__ import annotations
 from enum import IntEnum, unique
 
 
@@ -11,7 +12,14 @@ class NoteDurations(IntEnum):
     THIRTYSECOND_NOTE = 32
 
     @staticmethod
-    def getNoteDurationsFromFloat(x):
+    def getNoteDurationsFromFloat(x: float) -> NoteDurations:
+        """converts note duration from float to enum
+
+        :param x: float number to be converted
+        :type x: float
+        :return: return NoteDurations enum if there is match for given float, None otherwise
+        :rtype: NoteDurations
+        """
         i = int(x ** -1)
         result = None
 

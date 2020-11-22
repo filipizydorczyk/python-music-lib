@@ -51,8 +51,11 @@ class Intervals(IntEnum):
 
     @staticmethod
     def getIntervalBySemitones(semitones: int) -> Interval:
-        """
-        Static method that returns Interval adequate to given semitone numners
-        Semitone is int i <0;12>
+        """Static method that returns Interval adequate to given semitone numners. 
+
+        :param semitones: Semitone is int i <0;12>
+        :type semitones: int
+        :return: emnum Interval
+        :rtype: Interval
         """
         return Intervals(semitones)

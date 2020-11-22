@@ -9,9 +9,10 @@ class Note:
     def __init__(self, pitch: Pitch, duration):
         """Creates Note class
 
-        Args:
-            pitch (Pitch): pitch of note to be set
-            duration (float or NoteDurations): duration how long note will take. If you provide NoteDurations enum it will converted to float.
+        :param pitch: pitch of note to be set
+        :type pitch: Pitch
+        :param duration: duration how long note will take. If you provide NoteDurations enum it will converted to float.
+        :type duration: float or NoteDurations
         """
         self.__pitch = pitch
         self.__duration = float(duration)
@@ -19,16 +20,16 @@ class Note:
     def get_pitch(self) -> Pitch:
         """returns note pitch
 
-        Returns:
-            Pitch: pitch of given note
+        :return: pitch of given note
+        :rtype: Pitch
         """
         return self.__pitch
 
     def get_duration(self):
         """returns dauration given note
 
-        Returns:
-            NoteDurations or float: this will return NoteDuartion if float will match and float otherwise
+        :return: this will return NoteDuartion if float will match and float otherwise
+        :rtype: NoteDurations or float
         """
         enm = NoteDurations.getNoteDurationsFromFloat(self.__duration)
         if(enm == None):
@@ -39,23 +40,23 @@ class Note:
     def set_duration(self, duration: NoteDurations):
         """change given note duration
 
-        Args:
-            duration (NoteDurations): NoteDuration enum to be set
+        :param duration: NoteDuration enum to be set
+        :type duration: NoteDurations
         """
         self.__duration = duration
 
     def set_duration(self, duration: float):
         """change given note duration
 
-        Args:
-            duration (float): duration given with float
+        :param duration: duration given with float
+        :type duration: float
         """
         self.__duration = duration
 
     def set_pitch(self, pitch: Pitch):
         """set pitch of given note
 
-        Args:
-            pitch (Pitch): 
+        :param pitch: pitch of note
+        :type pitch: Pitch
         """
         self.__pitch = pitch
