@@ -5,6 +5,7 @@ from musiclib import Intervals
 from musiclib import Chords
 from musiclib import Pitch
 from musiclib import PitchesList
+from musiclib import createMajorChord
 
 
 class Bcolors:

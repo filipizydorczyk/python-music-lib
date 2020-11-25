@@ -13,3 +13,7 @@ from .models.pitch import Pitch
 # Collections
 
 from .collections.pitcheslist import PitchesList
+
+# Utils
+
+from .utils.chordsfactory import createMajorChord
