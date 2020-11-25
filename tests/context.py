@@ -4,6 +4,7 @@ from musiclib import Note
 from musiclib import Intervals
 from musiclib import Chords
 from musiclib import Pitch
+from musiclib import PitchesList
 
 
 class Bcolors:

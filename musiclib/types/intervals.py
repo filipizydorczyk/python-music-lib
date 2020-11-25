@@ -50,7 +50,7 @@ class Intervals(IntEnum):
     AUGMENTED_SEVENTH = 12
 
     @staticmethod
-    def getIntervalBySemitones(semitones: int) -> Interval:
+    def getIntervalBySemitones(semitones: int) -> Intervals:
         """Static method that returns Interval adequate to given semitone numners. 
 
         :param semitones: Semitone is int i <0;12>

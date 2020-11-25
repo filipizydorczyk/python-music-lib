@@ -9,3 +9,7 @@ from .types.chords import Chords
 
 from .models.note import Note
 from .models.pitch import Pitch
+
+# Collections
+
+from .collections.pitcheslist import PitchesList
