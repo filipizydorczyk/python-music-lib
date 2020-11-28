@@ -1,5 +1,6 @@
 from enum import IntEnum, unique
 
+
 @unique
 class ChordCategories(IntEnum):
     TRIADS = 0,

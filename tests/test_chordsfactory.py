@@ -1,6 +1,5 @@
-from musiclib.utils.chordsfactory import createMinorChord
 import pytest
-from .context import createMajorChord, Pitch, Sounds
+from .context import createMajorChord, Pitch, Sounds, create, createMinorChord, Chords
 
 
 def test_create_major_chords():
@@ -149,3 +148,21 @@ def test_create_minor_chords():
     assert chord.get_pitches()[0].get_sound() == Sounds.B
     assert chord.get_pitches()[1].get_sound() == Sounds.D
     assert chord.get_pitches()[2].get_sound() == Sounds.FIS
+
+
+def test_create_chords_by_type():
+    p = Pitch(Sounds.B, 4)
+    chord = createMinorChord(p)
+    by_type_chord = create(p, Chords.MINOR)
+
+    assert chord.get_pitches()[0] == by_type_chord.get_pitches()[0]
+    assert chord.get_pitches()[1] == by_type_chord.get_pitches()[1]
+    assert chord.get_pitches()[2] == by_type_chord.get_pitches()[2]
+
+    p = Pitch(Sounds.B, 4)
+    chord = createMajorChord(p)
+    by_type_chord = create(p, Chords.MAJOR)
+
+    assert chord.get_pitches()[0] == by_type_chord.get_pitches()[0]
+    assert chord.get_pitches()[1] == by_type_chord.get_pitches()[1]
+    assert chord.get_pitches()[2] == by_type_chord.get_pitches()[2]

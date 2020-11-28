@@ -51,7 +51,7 @@ def create(pitch: Pitch, chord_type: Chords) -> Chord:
     """
     if(chord_type == Chords.MAJOR):
         return createMajorChord(pitch)
-    elif(chord_type == Chords.MAJOR):
+    elif(chord_type == Chords.MINOR):
         return createMinorChord(pitch)
     else:
         return None

@@ -72,3 +72,12 @@ def test_adding_semitones_to_pitch():
 
     assert pitch.add(22).get_octave() == 5
     assert pitch.add(22).get_sound() == Sounds.G
+
+
+def test_pitch_eq_and_ne():
+    assert Pitch(Sounds.A, 4) == Pitch(Sounds.A, 4)
+    assert (Pitch(Sounds.A, 4) != Pitch(Sounds.A, 4)) == False
+    assert Pitch(Sounds.A, 5) != Pitch(Sounds.A, 4)
+    assert Pitch(Sounds.A, 4) != Pitch(Sounds.AIS, 4)
+    assert (Pitch(Sounds.A, 5) == Pitch(Sounds.A, 4)) == False
+    assert (Pitch(Sounds.A, 4) == Pitch(Sounds.AIS, 4)) == False

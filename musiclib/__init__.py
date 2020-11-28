@@ -17,3 +17,5 @@ from .collections.pitcheslist import PitchesList
 # Utils
 
 from .utils.chordsfactory import createMajorChord
+from .utils.chordsfactory import createMinorChord
+from .utils.chordsfactory import create

@@ -50,3 +50,15 @@ class Pitch:
         if(new_sound < self.__sound):
             new_octave += 1
         return Pitch(new_sound, new_octave)
+
+    def __eq__(self, other: Pitch):
+        if other == None:
+            return False
+        else:
+            return self.get_octave() == other.get_octave() and self.get_sound() == other.get_sound()
+
+    def __ne__(self, other: Pitch):
+        if other == None:
+            return True
+        else:
+            return self.get_octave() != other.get_octave() or self.get_sound() != other.get_sound()

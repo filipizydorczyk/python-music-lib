@@ -6,6 +6,8 @@ from musiclib import Chords
 from musiclib import Pitch
 from musiclib import PitchesList
 from musiclib import createMajorChord
+from musiclib import createMinorChord
+from musiclib import create
 
 
 class Bcolors:
