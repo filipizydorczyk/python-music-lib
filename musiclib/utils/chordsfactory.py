@@ -6,6 +6,13 @@ from musiclib.collections.pitcheslist import PitchesList
 
 
 def createMajorChord(pitch: Pitch) -> Chord:
+    """create major chord of given pitch
+
+    :param pitch: chord root pitch
+    :type pitch: Pitch
+    :return: major chord in one octave
+    :rtype: Chord
+    """
     plist = PitchesList()
     plist.append(pitch)
     plist.append(pitch.add(Intervals.MAJOR_THIRD))
@@ -13,13 +20,38 @@ def createMajorChord(pitch: Pitch) -> Chord:
     return Chord(plist, 1.0)
 
 
-def createMinorChord() -> Chord:
-    pass
+def createMinorChord(pitch: Pitch) -> Chord:
+    """create minor chord of given pitch
+
+    :param pitch: chord root pitch
+    :type pitch: Pitch
+    :return: minor chord in one octave
+    :rtype: Chord
+    """
+    plist = PitchesList()
+    plist.append(pitch)
+    plist.append(pitch.add(Intervals.MINOR_THIRD))
+    plist.append(pitch.add(Intervals.PERFECT_FIFTH))
+    return Chord(plist, 1.0)
 
 
 def create7thChord() -> Chord:
     pass
 
 
-def create(chord_type: Chords) -> Chord:
-    pass
+def create(pitch: Pitch, chord_type: Chords) -> Chord:
+    """create chord of given pitch and type
+
+    :param pitch: root pitch
+    :type pitch: Pitch
+    :param chord_type: type of chord we want to create (MAJOR, MINOR etc.)
+    :type chord_type: Chords
+    :return: created Chord instance or None if chord_type is not implemented or doesn't exist in package
+    :rtype: Chord
+    """
+    if(chord_type == Chords.MAJOR):
+        return createMajorChord(pitch)
+    elif(chord_type == Chords.MAJOR):
+        return createMinorChord(pitch)
+    else:
+        return None
