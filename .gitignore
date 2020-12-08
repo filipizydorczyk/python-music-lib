@@ -92,3 +92,7 @@ ENV/
 
 # VS Code
 .vscode
+
+
+# Samples just for now its in progress
+samples

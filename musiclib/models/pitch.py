@@ -51,6 +51,17 @@ class Pitch:
             new_octave += 1
         return Pitch(new_sound, new_octave)
 
+    def get_midi_code(self) -> int:
+        """get midi int code
+
+        :return: returns midi number code. For example for C4 its 60. If it will cross up range (127) it will return None
+        :rtype: int
+        """
+        result = (self.__octave + 1) * 12 + (self.__sound - 1)
+        if(result > 127):
+            return None
+        return result
+
     def __eq__(self, other: Pitch):
         if other == None:
             return False
