@@ -9,6 +9,7 @@ from .types.chords import Chords
 
 from .models.note import Note
 from .models.pitch import Pitch
+from .models.chord import Chord
 
 # Collections
 

@@ -2,8 +2,8 @@ from enum import Enum, auto
 
 
 class Chords(Enum):
-    MAJOR = auto(),
-    MINOR = auto(),
+    MAJOR = "major",
+    MINOR = "minor",
     DIMINISHED = auto(),
     AUGMENTED = auto(),
     MAJOR_7 = auto(),
