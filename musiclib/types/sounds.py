@@ -38,3 +38,6 @@ class Sounds(IntEnum):
         if(new_value == 0):
             new_value = 12
         return Sounds(new_value)
+
+    def __str__(self) -> str:
+        return super().__str__().split(".")[1]

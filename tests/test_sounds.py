@@ -54,3 +54,18 @@ def test_should_never_return_rest():
     sound = Sounds.C
     for i in range(100):
         assert sound.add(i) != Sounds.REST
+
+
+def test_str_method():
+    assert str(Sounds.A) == "A"
+    assert str(Sounds.AIS) == "AIS"
+    assert str(Sounds.B) == "B"
+    assert str(Sounds.C) == "C"
+    assert str(Sounds.CIS) == "CIS"
+    assert str(Sounds.D) == "D"
+    assert str(Sounds.DIS) == "DIS"
+    assert str(Sounds.E) == "E"
+    assert str(Sounds.F) == "F"
+    assert str(Sounds.FIS) == "FIS"
+    assert str(Sounds.G) == "G"
+    assert str(Sounds.GIS) == "GIS"
