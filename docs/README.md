@@ -5,7 +5,7 @@
 ```
 cd docs
 make clean
-make http
+make html
 ```
 
 ## Updating docs
