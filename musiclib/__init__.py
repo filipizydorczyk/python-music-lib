@@ -20,3 +20,7 @@ from .collections.pitcheslist import PitchesList
 from .utils.chordsfactory import createMajorChord
 from .utils.chordsfactory import createMinorChord
 from .utils.chordsfactory import create
+
+# Clients
+
+from .clients.jack import MidiProcessJack

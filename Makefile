@@ -3,3 +3,9 @@ init:
 
 test:
 	py.test
+
+develop:
+	python setup.py develop
+
+install:
+	python setup.py install
