@@ -1,4 +1,7 @@
 from typing import Callable, List, Tuple
+from musiclib.types.sounds import Sounds
+from musiclib.models.pitch import Pitch
+
 import jack
 import struct
 
@@ -20,12 +23,14 @@ class MidiProcessJack(jack.Client):
 
             for offset, indata in self.__inport.incoming_midi_events():
 
-                self.__outport.write_midi_event(offset, indata)  # pass through
                 if len(indata) == 3:
                     status, pitch, vel = struct.unpack('3B', indata)
                     if status >> 4 in (NOTEON, NOTEOFF):
-                        for data in self.__process_data(status, pitch, vel):
-                            self.__outport.write_midi_event(offset, data)
+                        for data in self.__process_data(status, Pitch(Sounds((pitch % 12) + 1), pitch // 12), vel):
+                            self.__outport.write_midi_event(
+                                offset, (data[0], data[1].get_midi_code(), data[2]))
+                            print("MIDI")
+                            print(data[1].get_midi_code())
 
-    def set_process_data(self, func: Callable[[int, int, int], List[Tuple[int, int, int]]]) -> None:
+    def set_process_data(self, func: Callable[[int, Pitch, int], List[Tuple[int, Pitch, int]]]) -> None:
         self.__process_data = func

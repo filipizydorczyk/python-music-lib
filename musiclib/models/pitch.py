@@ -73,3 +73,6 @@ class Pitch:
             return True
         else:
             return self.get_octave() != other.get_octave() or self.get_sound() != other.get_sound()
+
+    def __str__(self) -> str:
+        return "" + str(self.__sound) + str(self.__octave)
