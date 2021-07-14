@@ -5,6 +5,13 @@ from musiclib.types.chords import Chords
 from musiclib.collections.pitcheslist import PitchesList
 
 
+chord_dictionary = {
+    Chords.MAJOR: [Intervals.MAJOR_THIRD, Intervals.PERFECT_FIFTH],
+    Chords.MINOR: [Intervals.MINOR_THIRD, Intervals.PERFECT_FIFTH]
+
+}
+
+
 def createMajorChord(pitch: Pitch) -> Chord:
     """create major chord of given pitch
 
@@ -15,8 +22,9 @@ def createMajorChord(pitch: Pitch) -> Chord:
     """
     plist = PitchesList()
     plist.append(pitch)
-    plist.append(pitch.add(Intervals.MAJOR_THIRD))
-    plist.append(pitch.add(Intervals.PERFECT_FIFTH))
+    for inter in chord_dictionary[Chords.MAJOR]:
+        plist.append(pitch.add(inter))
+
     return Chord(plist, 1.0)
 
 
@@ -30,8 +38,9 @@ def createMinorChord(pitch: Pitch) -> Chord:
     """
     plist = PitchesList()
     plist.append(pitch)
-    plist.append(pitch.add(Intervals.MINOR_THIRD))
-    plist.append(pitch.add(Intervals.PERFECT_FIFTH))
+    for inter in chord_dictionary[Chords.MINOR]:
+        plist.append(pitch.add(inter))
+
     return Chord(plist, 1.0)
 
 
@@ -49,9 +58,9 @@ def create(pitch: Pitch, chord_type: Chords) -> Chord:
     :return: created Chord instance or None if chord_type is not implemented or doesn't exist in package
     :rtype: Chord
     """
-    if(chord_type == Chords.MAJOR):
-        return createMajorChord(pitch)
-    elif(chord_type == Chords.MINOR):
-        return createMinorChord(pitch)
-    else:
-        return None
+    plist = PitchesList()
+    plist.append(pitch)
+    for inter in chord_dictionary[chord_type]:
+        plist.append(pitch.add(inter))
+
+    return Chord(plist, 1.0)
