@@ -8,3 +8,4 @@ python-music-lib
    types
    collections
    utils
+   clients

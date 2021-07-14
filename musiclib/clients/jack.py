@@ -10,7 +10,15 @@ NOTEOFF = 0x8
 
 
 class MidiProcessJack(jack.Client):
+    """
+    Jack server client with one midi input and one midi output
+
+    :link: https://jackaudio.org/
+    """
+
     def __init__(self) -> None:
+        """Creates jack jserver client with one midi input and one midi output
+        """
         super().__init__('Musiclib midi client')
         self.__inport = self.midi_inports.register('input')
         self.__outport = self.midi_outports.register('output')
@@ -33,4 +41,10 @@ class MidiProcessJack(jack.Client):
                             print(data[1].get_midi_code())
 
     def set_process_data(self, func: Callable[[int, Pitch, int], List[Tuple[int, Pitch, int]]]) -> None:
+        """sets callback for incoming midi events
+
+        :param func: function that as argument takes tuplet (status, pitch, vel) 
+        and returns list of alike tuplets to be send to output
+        :type func: Callable[[int, Pitch, int], List[Tuple[int, Pitch, int]]]
+        """
         self.__process_data = func

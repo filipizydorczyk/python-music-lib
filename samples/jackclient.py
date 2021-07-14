@@ -1,3 +1,7 @@
+"""
+Example how to use jack client. This example takes midi input and create major chord based on incoming pitch. 
+"""
+
 from musiclib.models.pitch import Pitch
 from musiclib.types.sounds import Sounds
 from musiclib.clients.jack import MidiProcessJack
@@ -12,7 +16,6 @@ def create_chord(status, pitch: Pitch, vel):
 
     response = []
 
-    print("Chord")
     for ptch in chord.get_pitches():
         print(ptch)
         response.append((status, ptch, vel))
