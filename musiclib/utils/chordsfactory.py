@@ -20,12 +20,7 @@ def createMajorChord(pitch: Pitch) -> Chord:
     :return: major chord in one octave
     :rtype: Chord
     """
-    plist = PitchesList()
-    plist.append(pitch)
-    for inter in chord_dictionary[Chords.MAJOR]:
-        plist.append(pitch.add(inter))
-
-    return Chord(plist, 1.0)
+    return create(pitch, Chords.MAJOR)
 
 
 def createMinorChord(pitch: Pitch) -> Chord:
@@ -36,16 +31,7 @@ def createMinorChord(pitch: Pitch) -> Chord:
     :return: minor chord in one octave
     :rtype: Chord
     """
-    plist = PitchesList()
-    plist.append(pitch)
-    for inter in chord_dictionary[Chords.MINOR]:
-        plist.append(pitch.add(inter))
-
-    return Chord(plist, 1.0)
-
-
-def create7thChord() -> Chord:
-    pass
+    return create(pitch, Chords.MINOR)
 
 
 def create(pitch: Pitch, chord_type: Chords) -> Chord:
