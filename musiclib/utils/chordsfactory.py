@@ -8,15 +8,16 @@ from musiclib.collections.pitcheslist import PitchesList
 chord_dictionary = {
     Chords.MAJOR: [Intervals.MAJOR_THIRD, Intervals.PERFECT_FIFTH],
     Chords.MAJOR_7: [Intervals.MAJOR_THIRD, Intervals.PERFECT_FIFTH, Intervals.MAJOR_SEVENTH],
-    Chords.MAJ7: [Intervals.MAJOR_THIRD, Intervals.PERFECT_FIFTH, Intervals.MINOR_SEVENTH],
+    Chords.MAJ7: [Intervals.MAJOR_THIRD, Intervals.PERFECT_FIFTH, Intervals.MAJOR_SEVENTH],
     Chords.MINOR: [Intervals.MINOR_THIRD, Intervals.PERFECT_FIFTH],
     Chords.MINOR_7: [Intervals.MINOR_THIRD, Intervals.PERFECT_FIFTH, Intervals.MINOR_SEVENTH],
+    Chords.DOMINANT_7: [Intervals.MAJOR_THIRD, Intervals.PERFECT_FIFTH, Intervals.MINOR_SEVENTH],
     Chords.DIMINISHED: [Intervals.MINOR_THIRD, Intervals.DIMINISHED_FIFTH],
     Chords.DIMINISHED_7: [Intervals.MINOR_THIRD,
                           Intervals.DIMINISHED_FIFTH, Intervals.DIMINISHED_SEVENTH],
     Chords.AUGMENTED: [Intervals.MAJOR_THIRD, Intervals.AUGMENTED_FIFTH],
     Chords.AUGMENTED_7: [Intervals.MAJOR_THIRD,
-                         Intervals.AUGMENTED_FIFTH, Intervals.AUGMENTED_SEVENTH],
+                         Intervals.AUGMENTED_FIFTH, Intervals.MINOR_SEVENTH],
 }
 
 

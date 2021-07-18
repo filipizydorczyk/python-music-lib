@@ -19,7 +19,7 @@ class Chords(Enum):
     M69 = auto(),
     M11 = auto(),
     M13 = auto(),
-    MAJ7 = auto(),
+    MAJ7 = "major_7",
     MAJOR_2 = auto(),
     MAJOR_6 = auto(),
     MAJOR_9 = auto(),
