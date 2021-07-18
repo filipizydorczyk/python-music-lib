@@ -1,3 +1,4 @@
+from musiclib.types.intervals import Intervals
 import pytest
 from .context import Sounds, printTestHeader
 
@@ -28,6 +29,28 @@ def test_adding_semitones():
     assert sound.add(7) == Sounds.G
     assert sound.add(10) == Sounds.AIS
     assert sound.add(11) == Sounds.B
+
+
+def test_adding_intervals():
+    sound = Sounds.C
+    assert sound.add(Intervals.PERFECT_UNISON) == Sounds.C
+    assert sound.add(Intervals.MAJOR_SECOND) == Sounds.D
+    assert sound.add(Intervals.MINOR_THIRD) == Sounds.DIS
+    assert sound.add(Intervals.DIMINISHED_FIFTH) == Sounds.FIS
+    assert sound.add(Intervals.PERFECT_FIFTH) == Sounds.G
+    assert sound.add(Intervals.MINOR_SEVENTH) == Sounds.AIS
+    assert sound.add(Intervals.MAJOR_SEVENTH) == Sounds.B
+
+
+def test_adding_intervals_over_octave():
+    sound = Sounds.B
+    assert sound.add(Intervals.PERFECT_UNISON) == Sounds.B
+    assert sound.add(Intervals.MAJOR_SECOND) == Sounds.CIS
+    assert sound.add(Intervals.MINOR_THIRD) == Sounds.D
+    assert sound.add(Intervals.DIMINISHED_FIFTH) == Sounds.F
+    assert sound.add(Intervals.PERFECT_FIFTH) == Sounds.FIS
+    assert sound.add(Intervals.MINOR_SEVENTH) == Sounds.A
+    assert sound.add(Intervals.MAJOR_SEVENTH) == Sounds.AIS
 
 
 def test_adding_octaves_and_semitones():

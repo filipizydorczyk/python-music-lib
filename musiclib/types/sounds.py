@@ -1,4 +1,6 @@
 from __future__ import annotations
+from musiclib.types.intervals import Intervals
+from typing import Union
 from enum import IntEnum, unique
 
 
@@ -21,14 +23,15 @@ class Sounds(IntEnum):
     AIS = 11
     B = 12
 
-    def add(self, semitones: int) -> Sounds:
+    def add(self, semitones: Union[int, Intervals]) -> Sounds:
         """ Move your sound by given steps. If you want to move from C to D# you
             need to add 3. If you will add 12 sound won't change. Higher cycle repeats.
             So if you add 13 you move from C to C#. You will never recive REST enum from
             actual notes like C,D,E etc. If you attepmt to add steps to REST it will stay rest anyway.
 
-        :param semitones: how many steps u want to move your sound
-        :type semitones: int
+        :param semitones: how many steps u want to move your sound.
+        It can be provided by amound of semitones or interval name.
+        :type semitones: Union[int, Intervals]
         :return: new instance of sound after added given steps
         :rtype: Sounds
         """
