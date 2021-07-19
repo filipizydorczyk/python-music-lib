@@ -11,6 +11,7 @@ from .models.note import Note
 from .models.pitch import Pitch
 from .models.chord import Chord
 from .models.scales.majorscale import MajorScale
+from .models.scales.minorscale import MinorScale
 
 # Collections
 

@@ -9,6 +9,7 @@ from musiclib import createMajorChord
 from musiclib import createMinorChord
 from musiclib import create
 from musiclib import MajorScale
+from musiclib import MinorScale
 
 
 class Bcolors:

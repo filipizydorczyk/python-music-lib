@@ -33,6 +33,15 @@ Chord
 
 Scales
 ----------------------------
+
+Scale
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. automodule:: musiclib.models.scales.scale
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 MajorScale
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -41,4 +50,10 @@ MajorScale
    :undoc-members:
    :show-inheritance:
 
+MinorScale
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. automodule:: musiclib.models.scales.minorscale
+   :members:
+   :undoc-members:
+   :show-inheritance:
