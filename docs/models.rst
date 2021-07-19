@@ -31,7 +31,14 @@ Chord
    :undoc-members:
    :show-inheritance:
 
+Scales
+----------------------------
+MajorScale
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
+.. automodule:: musiclib.models.scales.majorscale
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 
