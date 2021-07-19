@@ -57,3 +57,11 @@ MinorScale
    :members:
    :undoc-members:
    :show-inheritance:
+
+WholeToneScale
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+   
+.. automodule:: musiclib.models.scales.wholetonescale
+   :members:
+   :undoc-members:
+   :show-inheritance:

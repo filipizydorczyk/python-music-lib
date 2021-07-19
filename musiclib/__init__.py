@@ -12,6 +12,8 @@ from .models.pitch import Pitch
 from .models.chord import Chord
 from .models.scales.majorscale import MajorScale
 from .models.scales.minorscale import MinorScale
+from .models.scales.scale import Scale
+from .models.scales.wholetonescale import WholeToneScale
 
 # Collections
 

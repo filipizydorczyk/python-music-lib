@@ -10,6 +10,7 @@ from musiclib import createMinorChord
 from musiclib import create
 from musiclib import MajorScale
 from musiclib import MinorScale
+from musiclib import WholeToneScale
 
 
 class Bcolors:
