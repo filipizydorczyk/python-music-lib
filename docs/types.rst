@@ -54,4 +54,10 @@ Sounds
    :undoc-members:
    :show-inheritance:
 
+Dynamics
+----------------------------
 
+.. automodule:: musiclib.types.dynamics
+   :members:
+   :undoc-members:
+   :show-inheritance:
