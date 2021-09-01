@@ -5,6 +5,9 @@ from .types.notedurations import NoteDurations
 from .types.intervals import Intervals
 from .types.chords import Chords
 from .types.dynamics import Dynamics
+from .types.dynamics import Changes
+from .types.articulations import Articulations
+
 
 # Models
 
