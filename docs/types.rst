@@ -61,3 +61,12 @@ Dynamics
    :members:
    :undoc-members:
    :show-inheritance:
+   
+Articulations
+----------------------------
+
+.. automodule:: musiclib.types.articulations
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
