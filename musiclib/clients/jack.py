@@ -10,8 +10,7 @@ NOTEOFF = 0x8
 
 
 class MidiProcessJack(jack.Client):
-    """
-    Jack server client with one midi input and one midi output
+    """Jack server client with one midi input and one midi output
 
     :link: https://jackaudio.org/
     """
@@ -44,7 +43,7 @@ class MidiProcessJack(jack.Client):
         """sets callback for incoming midi events
 
         :param func: function that as argument takes tuplet (status, pitch, vel) 
-        and returns list of alike tuplets to be send to output
+            and returns list of alike tuplets to be send to output
         :type func: Callable[[int, Pitch, int], List[Tuple[int, Pitch, int]]]
         """
         self.__process_data = func

@@ -25,6 +25,7 @@ class Dynamics(IntEnum):
 
 
     You can read more on wikipedia.
+
     :link: https://en.wikipedia.org/wiki/Dynamics_(music)
     """
 
@@ -37,17 +38,19 @@ class Dynamics(IntEnum):
     FORTISSIMO = 6,
     FORTISSISSIMO = 7
 
-    class Changes(Enum):
-        """Changes
 
-        Three Italian words are used to show gradual changes in volume: 
-         - crescendo translates as "increasing" (literally "growing")
-         - decrescendo translates as "decreasing".
-         - diminuendo translates as "diminishing".
+class Changes(Enum):
+    """Changes
 
-        You can read more on wikipedia.
-        :link: https://en.wikipedia.org/wiki/Dynamics_(music)
-        """
-        CRESCENDO = auto(),
-        DECRESCENDO = auto(),
-        DIMINUENDO = auto()
+    Three Italian words are used to show gradual changes in volume: 
+     - crescendo translates as "increasing" (literally "growing")
+     - decrescendo translates as "decreasing".
+     - diminuendo translates as "diminishing".
+
+    You can read more on wikipedia.
+
+    :link: https://en.wikipedia.org/wiki/Dynamics_(music)
+    """
+    CRESCENDO = auto(),
+    DECRESCENDO = auto(),
+    DIMINUENDO = auto()

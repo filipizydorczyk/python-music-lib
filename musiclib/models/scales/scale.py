@@ -24,10 +24,10 @@ class Scale:
         """returns set of sounds in created scale
 
         :return: set of sounds in created scale. Returned
-        value is copy of class field so that u couldn't
-        make change in Scale. If u want to pursue changes in
-        scale, assign returned set to variable and work on
-        that variable. 
+            value is copy of class field so that u couldn't
+            make change in Scale. If u want to pursue changes in
+            scale, assign returned set to variable and work on
+            that variable. 
         :rtype: Set[Sounds]
         """
         return self.__sounds.copy()
