@@ -76,7 +76,7 @@ AlgerianScales
 WholeToneScale
 **************************
    
-.. automodule:: musiclib.models.scales.wholetonescale
+.. automodule:: musiclib.models.scales.exotic.wholetonescale
    :members:
    :undoc-members:
    :show-inheritance:
