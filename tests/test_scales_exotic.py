@@ -1,5 +1,5 @@
 from musiclib.types.sounds import Sounds
-from .context import AlgerianScales, WholeToneScale, ArabicScales, AugmentedScales
+from .context import AlgerianScales, WholeToneScale, ArabicScale, AugmentedScale
 import pytest
 
 
@@ -71,7 +71,7 @@ def test_arabic_scale():
     desired_result = {Sounds.C, Sounds.D, Sounds.E,
                       Sounds.F, Sounds.FIS, Sounds.GIS, Sounds.AIS}
 
-    scale = ArabicScales(Sounds.C)
+    scale = ArabicScale(Sounds.C)
     actual_result = scale.get_scale_sounds()
     assert len(desired_result.symmetric_difference(actual_result)) == 0
 
@@ -80,7 +80,7 @@ def test_arabic_scale_over_ocateve():
     desired_result = {Sounds.G, Sounds.A, Sounds.B,
                       Sounds.C, Sounds.CIS, Sounds.DIS, Sounds.F}
 
-    scale = ArabicScales(Sounds.G)
+    scale = ArabicScale(Sounds.G)
     actual_result = scale.get_scale_sounds()
     assert len(desired_result.symmetric_difference(actual_result)) == 0
 
@@ -89,7 +89,7 @@ def test_augmented_scale():
     desired_result = {Sounds.C, Sounds.DIS, Sounds.E,
                       Sounds.G, Sounds.GIS, Sounds.B}
 
-    scale = AugmentedScales(Sounds.C)
+    scale = AugmentedScale(Sounds.C)
     actual_result = scale.get_scale_sounds()
     assert len(desired_result.symmetric_difference(actual_result)) == 0
 
@@ -98,6 +98,6 @@ def test_augmented_scale_over_ocateve():
     desired_result = {Sounds.G, Sounds.AIS, Sounds.B,
                       Sounds.D, Sounds.DIS, Sounds.FIS}
 
-    scale = AugmentedScales(Sounds.G)
+    scale = AugmentedScale(Sounds.G)
     actual_result = scale.get_scale_sounds()
     assert len(desired_result.symmetric_difference(actual_result)) == 0

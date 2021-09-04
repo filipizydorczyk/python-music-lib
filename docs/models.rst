@@ -76,7 +76,7 @@ AlgerianScale
 ArabicScale
 **************************
    
-.. automodule:: musiclib.models.scales.exotic.arabicscales
+.. automodule:: musiclib.models.scales.exotic.arabicscale
    :members:
    :undoc-members:
    :show-inheritance:
@@ -84,7 +84,7 @@ ArabicScale
 AugmentedScales
 **************************
    
-.. automodule:: musiclib.models.scales.exotic.augmentedscales
+.. automodule:: musiclib.models.scales.exotic.augmentedscale
    :members:
    :undoc-members:
    :show-inheritance:

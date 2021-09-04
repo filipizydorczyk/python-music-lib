@@ -19,8 +19,8 @@ from .models.scales.minorscale import MinorScale
 from .models.scales.scale import Scale
 from .models.scales.exotic.wholetonescale import WholeToneScale
 from .models.scales.exotic.algerianscale import AlgerianScales
-from .models.scales.exotic.arabicscales import ArabicScales
-from .models.scales.exotic.augmentedscales import AugmentedScales
+from .models.scales.exotic.arabicscale import ArabicScale
+from .models.scales.exotic.augmentedscale import AugmentedScale
 
 # Collections
 

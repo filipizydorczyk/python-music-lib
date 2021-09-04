@@ -3,7 +3,7 @@ from musiclib.types.intervals import Intervals
 from musiclib.types.sounds import Sounds
 
 
-class AugmentedScales(Scale):
+class AugmentedScale(Scale):
     """The Augmented Scale (a.k.a. Symmetrical Augmented Scale) consists 
     of six notes and therefore belongs to the category of hexatonic scales. 
     The name of the scale is based on the fact that it is built upon two 
@@ -23,7 +23,7 @@ class AugmentedScales(Scale):
         :type key: Sounds
         """
 
-        super(AugmentedScales, self).__init__(key, [
+        super(AugmentedScale, self).__init__(key, [
             Intervals.MINOR_THIRD,
             Intervals.HALF_TONE,
             Intervals.MINOR_THIRD,

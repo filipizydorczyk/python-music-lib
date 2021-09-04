@@ -3,7 +3,7 @@ from musiclib.types.intervals import Intervals
 from musiclib.types.sounds import Sounds
 
 
-class ArabicScales(Scale):
+class ArabicScale(Scale):
     """There are actually two different scales referred to as “Arabian”. 
     One is similar to the Major Locrian Scale and the other to the Diminished Scale. 
     The scales illustrated below in all keys belong to the former. They can easy be 
@@ -23,7 +23,7 @@ class ArabicScales(Scale):
         :type key: Sounds
         """
 
-        super(ArabicScales, self).__init__(key, [
+        super(ArabicScale, self).__init__(key, [
             Intervals.WHOLE_TONE,
             Intervals.WHOLE_TONE,
             Intervals.HALF_TONE,
