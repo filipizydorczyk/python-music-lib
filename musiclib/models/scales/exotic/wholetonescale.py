@@ -13,7 +13,7 @@ class WholeToneScale(Scale):
     """
 
     def __init__(self, key: Sounds) -> None:
-        """creates instance of minor scale for given key
+        """creates instance of whole tone scale for given key
 
         :param key: key of scale
         :type key: Sounds

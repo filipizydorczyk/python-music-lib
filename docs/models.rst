@@ -65,10 +65,18 @@ MinorScale
 Exotic scales
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-AlgerianScales
+AlgerianScale
 **************************
    
 .. automodule:: musiclib.models.scales.exotic.algerianscale
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   
+ArabicScale
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.arabicscales
    :members:
    :undoc-members:
    :show-inheritance:

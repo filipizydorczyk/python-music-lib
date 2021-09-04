@@ -12,6 +12,7 @@ from musiclib import MajorScale
 from musiclib import MinorScale
 from musiclib import WholeToneScale
 from musiclib import AlgerianScales
+from musiclib import ArabicScales
 
 
 class Bcolors:

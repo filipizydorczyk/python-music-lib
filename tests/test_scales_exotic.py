@@ -1,5 +1,5 @@
 from musiclib.types.sounds import Sounds
-from .context import AlgerianScales, WholeToneScale
+from .context import AlgerianScales, WholeToneScale, ArabicScales
 import pytest
 
 
@@ -65,3 +65,21 @@ def test_whole_tone_overlapping_2_scale():
     assert len(scale_cis.symmetric_difference(scale_f)) == 0
     assert len(scale_a.symmetric_difference(scale_dis)) == 0
     assert len(scale_g.symmetric_difference(scale_b)) == 0
+
+
+def test_arabic_scale():
+    desired_result = {Sounds.C, Sounds.D, Sounds.E,
+                      Sounds.F, Sounds.FIS, Sounds.GIS, Sounds.AIS}
+
+    scale = ArabicScales(Sounds.C)
+    actual_result = scale.get_scale_sounds()
+    assert len(desired_result.symmetric_difference(actual_result)) == 0
+
+
+def test_arabic_scale_over_ocateve():
+    desired_result = {Sounds.G, Sounds.A, Sounds.B,
+                      Sounds.C, Sounds.CIS, Sounds.DIS, Sounds.F}
+
+    scale = ArabicScales(Sounds.G)
+    actual_result = scale.get_scale_sounds()
+    assert len(desired_result.symmetric_difference(actual_result)) == 0
