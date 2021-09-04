@@ -1,5 +1,5 @@
 from musiclib.types.sounds import Sounds
-from .context import AlgerianScales, WholeToneScale, ArabicScale, AugmentedScale, BalineseScale, ByzantineScale
+from .context import AlgerianScales, WholeToneScale, ArabicScale, AugmentedScale, BalineseScale, ByzantineScale, ChineseScale
 import pytest
 
 
@@ -135,5 +135,23 @@ def test_byzantine_scale_over_ocateve():
                       Sounds.C, Sounds.D, Sounds.DIS, Sounds.FIS}
 
     scale = ByzantineScale(Sounds.G)
+    actual_result = scale.get_scale_sounds()
+    assert len(desired_result.symmetric_difference(actual_result)) == 0
+
+
+def test_chinese_scale():
+    desired_result = {Sounds.C, Sounds.E, Sounds.FIS,
+                      Sounds.G, Sounds.B}
+
+    scale = ChineseScale(Sounds.C)
+    actual_result = scale.get_scale_sounds()
+    assert len(desired_result.symmetric_difference(actual_result)) == 0
+
+
+def test_chinese_scale_over_ocateve():
+    desired_result = {Sounds.G, Sounds.B, Sounds.CIS,
+                      Sounds.D, Sounds.FIS}
+
+    scale = ChineseScale(Sounds.G)
     actual_result = scale.get_scale_sounds()
     assert len(desired_result.symmetric_difference(actual_result)) == 0

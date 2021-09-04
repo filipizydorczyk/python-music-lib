@@ -23,6 +23,7 @@ from .models.scales.exotic.arabicscale import ArabicScale
 from .models.scales.exotic.augmentedscale import AugmentedScale
 from .models.scales.exotic.balinesescale import BalineseScale
 from .models.scales.exotic.byzantinescale import ByzantineScale
+from .models.scales.exotic.chinesescale import ChineseScale
 
 # Collections
 

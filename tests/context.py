@@ -16,6 +16,7 @@ from musiclib import ArabicScale
 from musiclib import AugmentedScale
 from musiclib import BalineseScale
 from musiclib import ByzantineScale
+from musiclib import ChineseScale
 
 
 class Bcolors:

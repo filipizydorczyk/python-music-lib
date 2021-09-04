@@ -105,6 +105,14 @@ ByzantineScale
    :undoc-members:
    :show-inheritance:        
   
+ChineseScale
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.chinesescale
+   :members:
+   :undoc-members:
+   :show-inheritance:    
+ 
  
 WholeToneScale
 **************************
