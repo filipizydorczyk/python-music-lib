@@ -20,6 +20,7 @@ from .models.scales.scale import Scale
 from .models.scales.exotic.wholetonescale import WholeToneScale
 from .models.scales.exotic.algerianscale import AlgerianScales
 from .models.scales.exotic.arabicscales import ArabicScales
+from .models.scales.exotic.augmentedscales import AugmentedScales
 
 # Collections
 

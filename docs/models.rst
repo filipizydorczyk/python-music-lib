@@ -81,6 +81,15 @@ ArabicScale
    :undoc-members:
    :show-inheritance:
    
+AugmentedScales
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.augmentedscales
+   :members:
+   :undoc-members:
+   :show-inheritance:
+      
+  
 WholeToneScale
 **************************
    
