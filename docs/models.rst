@@ -88,7 +88,14 @@ AugmentedScales
    :members:
    :undoc-members:
    :show-inheritance:
-      
+
+BalineseScale
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.balinesescale
+   :members:
+   :undoc-members:
+   :show-inheritance:      
   
 WholeToneScale
 **************************
