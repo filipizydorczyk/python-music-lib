@@ -4,7 +4,12 @@ from musiclib.types.sounds import Sounds
 
 
 class WholeToneScale(Scale):
-    """This class contains set of sounds in minor scale for given key.
+    """The Whole Tone Scale (a.k.a. the Augmented Scale) is, as the name implies, 
+    built from notes with intervals of a whole note. This is a so-called symmetrical 
+    scale, meaning that the interval is the same throughout the scale. A whole tone 
+    is the same as two steps on the keyboard – a half tone is consequently one step.
+
+    :link: https://www.pianoscales.org/whole-tone.html
     """
 
     def __init__(self, key: Sounds) -> None:
