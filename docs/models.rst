@@ -34,8 +34,11 @@ Chord
 Scales
 ----------------------------
 
-Scale
+"Normal" scales
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Scale
+**************************
 
 .. automodule:: musiclib.models.scales.scale
    :members:
@@ -43,7 +46,7 @@ Scale
    :show-inheritance:
 
 MajorScale
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************
 
 .. automodule:: musiclib.models.scales.majorscale
    :members:
@@ -51,17 +54,30 @@ MajorScale
    :show-inheritance:
 
 MinorScale
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+**************************
 
 .. automodule:: musiclib.models.scales.minorscale
    :members:
    :undoc-members:
    :show-inheritance:
 
-WholeToneScale
+
+Exotic scales
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+AlgerianScales
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.algerianscale
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   
+WholeToneScale
+**************************
    
 .. automodule:: musiclib.models.scales.wholetonescale
    :members:
    :undoc-members:
    :show-inheritance:
+   
