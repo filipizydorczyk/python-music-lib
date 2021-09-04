@@ -97,6 +97,15 @@ BalineseScale
    :undoc-members:
    :show-inheritance:      
   
+ByzantineScale
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.byzantinescale
+   :members:
+   :undoc-members:
+   :show-inheritance:        
+  
+ 
 WholeToneScale
 **************************
    

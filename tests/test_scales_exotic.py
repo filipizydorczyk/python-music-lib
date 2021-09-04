@@ -1,5 +1,5 @@
 from musiclib.types.sounds import Sounds
-from .context import AlgerianScales, WholeToneScale, ArabicScale, AugmentedScale, BalineseScale
+from .context import AlgerianScales, WholeToneScale, ArabicScale, AugmentedScale, BalineseScale, ByzantineScale
 import pytest
 
 
@@ -117,5 +117,23 @@ def test_balinese_scale_over_ocateve():
                       Sounds.D, Sounds.DIS}
 
     scale = BalineseScale(Sounds.G)
+    actual_result = scale.get_scale_sounds()
+    assert len(desired_result.symmetric_difference(actual_result)) == 0
+
+
+def test_byzantine_scale():
+    desired_result = {Sounds.C, Sounds.CIS, Sounds.E,
+                      Sounds.F, Sounds.G, Sounds.GIS, Sounds.B}
+
+    scale = ByzantineScale(Sounds.C)
+    actual_result = scale.get_scale_sounds()
+    assert len(desired_result.symmetric_difference(actual_result)) == 0
+
+
+def test_byzantine_scale_over_ocateve():
+    desired_result = {Sounds.G, Sounds.GIS, Sounds.B,
+                      Sounds.C, Sounds.D, Sounds.DIS, Sounds.FIS}
+
+    scale = ByzantineScale(Sounds.G)
     actual_result = scale.get_scale_sounds()
     assert len(desired_result.symmetric_difference(actual_result)) == 0

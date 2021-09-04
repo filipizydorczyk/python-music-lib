@@ -22,6 +22,7 @@ from .models.scales.exotic.algerianscale import AlgerianScales
 from .models.scales.exotic.arabicscale import ArabicScale
 from .models.scales.exotic.augmentedscale import AugmentedScale
 from .models.scales.exotic.balinesescale import BalineseScale
+from .models.scales.exotic.byzantinescale import ByzantineScale
 
 # Collections
 
