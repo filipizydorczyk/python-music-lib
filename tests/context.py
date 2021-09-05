@@ -1,3 +1,4 @@
+from typing import Set
 from musiclib import Sounds
 from musiclib import NoteDurations
 from musiclib import Note
@@ -17,6 +18,7 @@ from musiclib import AugmentedScale
 from musiclib import BalineseScale
 from musiclib import ByzantineScale
 from musiclib import ChineseScale
+from musiclib import Scale
 
 
 class Bcolors:
@@ -30,3 +32,8 @@ class Bcolors:
 
 def printTestHeader(header, value):
     print(Bcolors.HEADER + header + Bcolors.ENDC, value)
+
+
+def scale_comparator(scale: Scale, desired_result: Set[Sounds]):
+    actual_result = scale.get_scale_sounds()
+    return len(desired_result.symmetric_difference(actual_result)) == 0

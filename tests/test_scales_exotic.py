@@ -1,42 +1,41 @@
-from musiclib.types.sounds import Sounds
-from .context import AlgerianScales, WholeToneScale, ArabicScale, AugmentedScale, BalineseScale, ByzantineScale, ChineseScale
 import pytest
+from musiclib.types.sounds import Sounds
+from .context import (
+    AlgerianScales,
+    WholeToneScale,
+    ArabicScale,
+    AugmentedScale,
+    BalineseScale,
+    ByzantineScale,
+    ChineseScale,
+    scale_comparator
+)
 
 
 def test_algerian_scale():
-    desired_result = {Sounds.C, Sounds.D, Sounds.DIS,
-                      Sounds.F, Sounds.FIS, Sounds.G, Sounds.GIS, Sounds.B}
-
-    scale = AlgerianScales(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(AlgerianScales(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.DIS,
+                             Sounds.F, Sounds.FIS, Sounds.G,
+                             Sounds.GIS, Sounds.B})
 
 
 def test_algerian_scale_over_ocateve():
-    desired_result = {Sounds.G, Sounds.A, Sounds.AIS,
-                      Sounds.C, Sounds.CIS, Sounds.D, Sounds.DIS, Sounds.FIS}
-
-    scale = AlgerianScales(Sounds.G)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(AlgerianScales(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.AIS,
+                             Sounds.C, Sounds.CIS, Sounds.D,
+                             Sounds.DIS, Sounds.FIS})
 
 
 def test_whole_tone_1_scale():
-    desired_result = {Sounds.C, Sounds.D, Sounds.E,
-                      Sounds.FIS, Sounds.GIS, Sounds.AIS}
-
-    scale = WholeToneScale(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(WholeToneScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E,
+                             Sounds.FIS, Sounds.GIS, Sounds.AIS})
 
 
 def test_whole_tone_2_scale():
-    desired_result = {Sounds.CIS, Sounds.DIS, Sounds.F,
-                      Sounds.G, Sounds.A, Sounds.B}
-
-    scale = WholeToneScale(Sounds.CIS)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(WholeToneScale(Sounds.CIS),
+                            {Sounds.CIS, Sounds.DIS, Sounds.F,
+                             Sounds.G, Sounds.A, Sounds.B})
 
 
 def test_whole_tone_overlapping_1_scale():
@@ -68,90 +67,62 @@ def test_whole_tone_overlapping_2_scale():
 
 
 def test_arabic_scale():
-    desired_result = {Sounds.C, Sounds.D, Sounds.E,
-                      Sounds.F, Sounds.FIS, Sounds.GIS, Sounds.AIS}
-
-    scale = ArabicScale(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(ArabicScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E,
+                             Sounds.F, Sounds.FIS, Sounds.GIS,
+                             Sounds.AIS})
 
 
 def test_arabic_scale_over_ocateve():
-    desired_result = {Sounds.G, Sounds.A, Sounds.B,
-                      Sounds.C, Sounds.CIS, Sounds.DIS, Sounds.F}
-
-    scale = ArabicScale(Sounds.G)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(ArabicScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B,
+                             Sounds.C, Sounds.CIS, Sounds.DIS,
+                             Sounds.F})
 
 
 def test_augmented_scale():
-    desired_result = {Sounds.C, Sounds.DIS, Sounds.E,
-                      Sounds.G, Sounds.GIS, Sounds.B}
-
-    scale = AugmentedScale(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(AugmentedScale(Sounds.C),
+                            {Sounds.C, Sounds.DIS, Sounds.E,
+                             Sounds.G, Sounds.GIS, Sounds.B})
 
 
 def test_augmented_scale_over_ocateve():
-    desired_result = {Sounds.G, Sounds.AIS, Sounds.B,
-                      Sounds.D, Sounds.DIS, Sounds.FIS}
-
-    scale = AugmentedScale(Sounds.G)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(AugmentedScale(Sounds.G),
+                            {Sounds.G, Sounds.AIS, Sounds.B,
+                             Sounds.D, Sounds.DIS, Sounds.FIS})
 
 
 def test_balinese_scale():
-    desired_result = {Sounds.C, Sounds.CIS, Sounds.DIS,
-                      Sounds.G, Sounds.GIS}
-
-    scale = BalineseScale(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(BalineseScale(Sounds.C),
+                            {Sounds.C, Sounds.CIS, Sounds.DIS,
+                             Sounds.G, Sounds.GIS})
 
 
 def test_balinese_scale_over_ocateve():
-    desired_result = {Sounds.G, Sounds.GIS, Sounds.AIS,
-                      Sounds.D, Sounds.DIS}
-
-    scale = BalineseScale(Sounds.G)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(BalineseScale(Sounds.G),
+                            {Sounds.G, Sounds.GIS, Sounds.AIS,
+                             Sounds.D, Sounds.DIS})
 
 
 def test_byzantine_scale():
-    desired_result = {Sounds.C, Sounds.CIS, Sounds.E,
-                      Sounds.F, Sounds.G, Sounds.GIS, Sounds.B}
-
-    scale = ByzantineScale(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(ByzantineScale(Sounds.C),
+                            {Sounds.C, Sounds.CIS, Sounds.E,
+                             Sounds.F, Sounds.G, Sounds.GIS, Sounds.B})
 
 
 def test_byzantine_scale_over_ocateve():
-    desired_result = {Sounds.G, Sounds.GIS, Sounds.B,
-                      Sounds.C, Sounds.D, Sounds.DIS, Sounds.FIS}
-
-    scale = ByzantineScale(Sounds.G)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(ByzantineScale(Sounds.G),
+                            {Sounds.G, Sounds.GIS, Sounds.B,
+                             Sounds.C, Sounds.D, Sounds.DIS, Sounds.FIS})
 
 
 def test_chinese_scale():
-    desired_result = {Sounds.C, Sounds.E, Sounds.FIS,
-                      Sounds.G, Sounds.B}
-
-    scale = ChineseScale(Sounds.C)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(ChineseScale(Sounds.C),
+                            {Sounds.C, Sounds.E, Sounds.FIS,
+                             Sounds.G, Sounds.B})
 
 
 def test_chinese_scale_over_ocateve():
-    desired_result = {Sounds.G, Sounds.B, Sounds.CIS,
-                      Sounds.D, Sounds.FIS}
-
-    scale = ChineseScale(Sounds.G)
-    actual_result = scale.get_scale_sounds()
-    assert len(desired_result.symmetric_difference(actual_result)) == 0
+    assert scale_comparator(ChineseScale(Sounds.G),
+                            {Sounds.G, Sounds.B, Sounds.CIS,
+                             Sounds.D, Sounds.FIS})
