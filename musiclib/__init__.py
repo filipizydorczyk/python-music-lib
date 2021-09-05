@@ -29,6 +29,7 @@ from .models.scales.exotic.chinesescale import ChineseScale
 from .models.scales.exotic.diminishedscale import DiminishedScale
 from .models.scales.exotic.dominantdiminishedscale import DominantDiminishedScale
 from .models.scales.exotic import DiminishedBluesScale
+from .models.scales.exotic.egyptianscale import EgyptianScale
 
 # Collections
 

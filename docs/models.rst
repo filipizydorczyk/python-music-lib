@@ -129,6 +129,14 @@ DominantDiminishedScale/DiminishedBluesScale
    :undoc-members:
    :show-inheritance:    
  
+EgyptianScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.egyptianscale
+   :members:
+   :undoc-members:
+   :show-inheritance:    
+ 
 WholeToneScale
 ***********************************************
    

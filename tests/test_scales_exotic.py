@@ -11,7 +11,8 @@ from .context import (
     DiminishedScale,
     DominantDiminishedScale,
     DiminishedBluesScale,
-    scale_comparator
+    scale_comparator,
+    EgyptianScale
 )
 
 
@@ -163,3 +164,15 @@ def test_diminished_blues_is_dominant_diminished():
     for sound in Sounds:
         assert scale_comparator(DiminishedBluesScale(
             sound), DominantDiminishedScale(sound).get_scale_sounds())
+
+
+def test_dominant_egyptian_scale():
+    assert scale_comparator(EgyptianScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.F,
+                             Sounds.G, Sounds.AIS})
+
+
+def test_dominant_egyptian_scale_over_ocateve():
+    assert scale_comparator(EgyptianScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.C,
+                             Sounds.D, Sounds.F, Sounds.G})
