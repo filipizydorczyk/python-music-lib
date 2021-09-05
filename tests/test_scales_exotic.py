@@ -9,6 +9,8 @@ from .context import (
     ByzantineScale,
     ChineseScale,
     DiminishedScale,
+    DominantDiminishedScale,
+    DiminishedBluesScale,
     scale_comparator
 )
 
@@ -141,3 +143,23 @@ def test_diminished_scale_over_ocateve():
                             {Sounds.G, Sounds.A, Sounds.AIS,
                              Sounds.C, Sounds.CIS, Sounds.DIS,
                              Sounds.E, Sounds.FIS})
+
+
+def test_dominant_diminished_scale():
+    assert scale_comparator(DominantDiminishedScale(Sounds.C),
+                            {Sounds.C, Sounds.CIS, Sounds.DIS,
+                             Sounds.E, Sounds.FIS, Sounds.G,
+                             Sounds.A, Sounds.AIS})
+
+
+def test_dominant_diminished_scale_over_ocateve():
+    assert scale_comparator(DominantDiminishedScale(Sounds.G),
+                            {Sounds.G, Sounds.GIS, Sounds.AIS,
+                             Sounds.B, Sounds.CIS, Sounds.D,
+                             Sounds.E, Sounds.F})
+
+
+def test_diminished_blues_is_dominant_diminished():
+    for sound in Sounds:
+        assert scale_comparator(DiminishedBluesScale(
+            sound), DominantDiminishedScale(sound).get_scale_sounds())

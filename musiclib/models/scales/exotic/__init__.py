@@ -1,0 +1,1 @@
+from .dominantdiminishedscale import DominantDiminishedScale as DiminishedBluesScale

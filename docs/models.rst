@@ -1,5 +1,5 @@
 Models
-================
+===============================================
 
 .. automodule:: musiclib.models
    :members:
@@ -7,7 +7,7 @@ Models
    :show-inheritance:
 
 Note
-----------------------------
+-----------------------------------------------
 
 .. automodule:: musiclib.models.note
    :members:
@@ -16,7 +16,7 @@ Note
 
 
 Pitch
-----------------------------
+-----------------------------------------------
 
 .. automodule:: musiclib.models.pitch
    :members:
@@ -24,7 +24,7 @@ Pitch
    :show-inheritance:
 
 Chord
-----------------------------
+-----------------------------------------------
 
 .. automodule:: musiclib.models.chord
    :members:
@@ -32,13 +32,13 @@ Chord
    :show-inheritance:
 
 Scales
-----------------------------
+-----------------------------------------------
 
 "Normal" scales
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Scale
-**************************
+***********************************************
 
 .. automodule:: musiclib.models.scales.scale
    :members:
@@ -46,7 +46,7 @@ Scale
    :show-inheritance:
 
 MajorScale
-**************************
+***********************************************
 
 .. automodule:: musiclib.models.scales.majorscale
    :members:
@@ -54,7 +54,7 @@ MajorScale
    :show-inheritance:
 
 MinorScale
-**************************
+***********************************************
 
 .. automodule:: musiclib.models.scales.minorscale
    :members:
@@ -63,10 +63,10 @@ MinorScale
 
 
 Exotic scales
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 AlgerianScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.algerianscale
    :members:
@@ -74,7 +74,7 @@ AlgerianScale
    :show-inheritance:
    
 ArabicScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.arabicscale
    :members:
@@ -82,7 +82,7 @@ ArabicScale
    :show-inheritance:
    
 AugmentedScales
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.augmentedscale
    :members:
@@ -90,7 +90,7 @@ AugmentedScales
    :show-inheritance:
 
 BalineseScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.balinesescale
    :members:
@@ -98,7 +98,7 @@ BalineseScale
    :show-inheritance:      
   
 ByzantineScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.byzantinescale
    :members:
@@ -106,7 +106,7 @@ ByzantineScale
    :show-inheritance:        
   
 ChineseScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.chinesescale
    :members:
@@ -114,15 +114,23 @@ ChineseScale
    :show-inheritance:    
  
 DiminishedScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.diminishedscale
    :members:
    :undoc-members:
    :show-inheritance:   
  
+DominantDiminishedScale/DiminishedBluesScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.dominantdiminishedscale
+   :members:
+   :undoc-members:
+   :show-inheritance:    
+ 
 WholeToneScale
-**************************
+***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.wholetonescale
    :members:
