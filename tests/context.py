@@ -30,10 +30,6 @@ class Bcolors:
     ENDC = '\033[0m'
 
 
-def printTestHeader(header, value):
-    print(Bcolors.HEADER + header + Bcolors.ENDC, value)
-
-
 def scale_comparator(scale: Scale, desired_result: Set[Sounds]):
     actual_result = scale.get_scale_sounds()
     return len(desired_result.symmetric_difference(actual_result)) == 0

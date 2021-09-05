@@ -1,10 +1,9 @@
 from musiclib.types.intervals import Intervals
 import pytest
-from .context import Sounds, printTestHeader
+from .context import Sounds
 
 
 def test_correct_values():
-    printTestHeader("SoundsTest", "test_correct_values")
     assert int(Sounds.REST) == 0
     assert int(Sounds.C) == 1
     assert int(Sounds.CIS) == 2
