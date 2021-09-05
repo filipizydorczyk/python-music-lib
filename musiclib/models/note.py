@@ -1,4 +1,4 @@
-from musiclib.types.sounds import Sounds
+
 from musiclib.types.notedurations import NoteDurations
 from musiclib.models.pitch import Pitch
 
@@ -31,7 +31,7 @@ class Note:
         :return: this will return NoteDuartion if float will match and float otherwise
         :rtype: NoteDurations or float
         """
-        enm = NoteDurations.getNoteDurationsFromFloat(self.__duration)
+        enm = NoteDurations.get_note_durations_from_float(self.__duration)
         if(enm == None):
             return self.__duration
         else:

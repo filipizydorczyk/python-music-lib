@@ -3,9 +3,8 @@ Example how to use jack client. This example takes midi input and create major c
 """
 
 from musiclib.models.pitch import Pitch
-from musiclib.types.sounds import Sounds
 from musiclib.clients.jack import MidiProcessJack
-from musiclib.utils.chordsfactory import create_minor_chord, create_major_chord
+from musiclib.utils.chordsfactory import create_major_chord
 
 client = MidiProcessJack()
 

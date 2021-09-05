@@ -1,7 +1,3 @@
-from musiclib.types.notedurations import NoteDurations
-from musiclib.models.pitch import Pitch
-
-
 class Chord:
     """model representing chord
     """

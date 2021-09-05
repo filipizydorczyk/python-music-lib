@@ -1,5 +1,12 @@
 import pytest
-from .context import create_major_chord, Pitch, Sounds, create, create_minor_chord, Chords
+from .context import (
+    create_major_chord,
+    Pitch,
+    Sounds,
+    create,
+    create_minor_chord,
+    Chords
+)
 
 
 def test_create_major_chords():
