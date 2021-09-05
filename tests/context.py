@@ -6,8 +6,8 @@ from musiclib import Intervals
 from musiclib import Chords
 from musiclib import Pitch
 from musiclib import PitchesList
-from musiclib import createMajorChord
-from musiclib import createMinorChord
+from musiclib import create_major_chord
+from musiclib import create_minor_chord
 from musiclib import create
 from musiclib import MajorScale
 from musiclib import MinorScale

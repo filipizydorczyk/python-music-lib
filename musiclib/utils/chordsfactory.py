@@ -21,7 +21,7 @@ chord_dictionary = {
 }
 
 
-def createMajorChord(pitch: Pitch) -> Chord:
+def create_major_chord(pitch: Pitch) -> Chord:
     """create major chord of given pitch
 
     :param pitch: chord root pitch
@@ -32,7 +32,7 @@ def createMajorChord(pitch: Pitch) -> Chord:
     return create(pitch, Chords.MAJOR)
 
 
-def createMinorChord(pitch: Pitch) -> Chord:
+def create_minor_chord(pitch: Pitch) -> Chord:
     """create minor chord of given pitch
 
     :param pitch: chord root pitch

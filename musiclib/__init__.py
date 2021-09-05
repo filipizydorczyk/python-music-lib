@@ -31,8 +31,8 @@ from .collections.pitcheslist import PitchesList
 
 # Utils
 
-from .utils.chordsfactory import createMajorChord
-from .utils.chordsfactory import createMinorChord
+from .utils.chordsfactory import create_major_chord
+from .utils.chordsfactory import create_minor_chord
 from .utils.chordsfactory import create
 
 # Clients

@@ -5,14 +5,14 @@ Example how to use jack client. This example takes midi input and create major c
 from musiclib.models.pitch import Pitch
 from musiclib.types.sounds import Sounds
 from musiclib.clients.jack import MidiProcessJack
-from musiclib.utils.chordsfactory import createMinorChord, createMajorChord
+from musiclib.utils.chordsfactory import create_minor_chord, create_major_chord
 
 client = MidiProcessJack()
 
 
 @client.set_process_data
 def create_chord(status, pitch: Pitch, vel):
-    chord = createMajorChord(pitch)
+    chord = create_major_chord(pitch)
 
     response = []
 

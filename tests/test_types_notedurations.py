@@ -77,9 +77,9 @@ def test_correct_ne_comparing():
 
 
 def test_getting_duartion_from_float_success():
-    assert NoteDurations.getNoteDurationsFromFloat(
+    assert NoteDurations.get_note_durations_from_float(
         0.125) == NoteDurations.EIGHTH_NOTE
 
 
 def test_getting_duartion_from_float_failed():
-    assert NoteDurations.getNoteDurationsFromFloat(0.126) == None
+    assert NoteDurations.get_note_durations_from_float(0.126) == None

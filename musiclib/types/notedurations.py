@@ -12,7 +12,7 @@ class NoteDurations(IntEnum):
     THIRTYSECOND_NOTE = 32
 
     @staticmethod
-    def getNoteDurationsFromFloat(x: float) -> NoteDurations:
+    def get_note_durations_from_float(x: float) -> NoteDurations:
         """converts note duration from float to enum
 
         :param x: float number to be converted
