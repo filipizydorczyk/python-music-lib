@@ -1,24 +1,5 @@
 from typing import Set
-from musiclib import Sounds
-from musiclib import NoteDurations
-from musiclib import Note
-from musiclib import Intervals
-from musiclib import Chords
-from musiclib import Pitch
-from musiclib import PitchesList
-from musiclib import create_major_chord
-from musiclib import create_minor_chord
-from musiclib import create
-from musiclib import MajorScale
-from musiclib import MinorScale
-from musiclib import WholeToneScale
-from musiclib import AlgerianScales
-from musiclib import ArabicScale
-from musiclib import AugmentedScale
-from musiclib import BalineseScale
-from musiclib import ByzantineScale
-from musiclib import ChineseScale
-from musiclib import Scale
+from musiclib import *
 
 
 class Bcolors:

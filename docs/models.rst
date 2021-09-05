@@ -113,6 +113,13 @@ ChineseScale
    :undoc-members:
    :show-inheritance:    
  
+DiminishedScale
+**************************
+   
+.. automodule:: musiclib.models.scales.exotic.diminishedscale
+   :members:
+   :undoc-members:
+   :show-inheritance:   
  
 WholeToneScale
 **************************

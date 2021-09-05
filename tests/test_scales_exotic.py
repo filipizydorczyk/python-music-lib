@@ -8,6 +8,7 @@ from .context import (
     BalineseScale,
     ByzantineScale,
     ChineseScale,
+    DiminishedScale,
     scale_comparator
 )
 
@@ -126,3 +127,17 @@ def test_chinese_scale_over_ocateve():
     assert scale_comparator(ChineseScale(Sounds.G),
                             {Sounds.G, Sounds.B, Sounds.CIS,
                              Sounds.D, Sounds.FIS})
+
+
+def test_diminished_scale():
+    assert scale_comparator(DiminishedScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.DIS,
+                             Sounds.F, Sounds.FIS, Sounds.GIS,
+                             Sounds.A, Sounds.B})
+
+
+def test_diminished_scale_over_ocateve():
+    assert scale_comparator(DiminishedScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.AIS,
+                             Sounds.C, Sounds.CIS, Sounds.DIS,
+                             Sounds.E, Sounds.FIS})

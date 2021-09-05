@@ -14,9 +14,11 @@ from .types.articulations import Articulations
 from .models.note import Note
 from .models.pitch import Pitch
 from .models.chord import Chord
+
 from .models.scales.majorscale import MajorScale
 from .models.scales.minorscale import MinorScale
 from .models.scales.scale import Scale
+
 from .models.scales.exotic.wholetonescale import WholeToneScale
 from .models.scales.exotic.algerianscale import AlgerianScales
 from .models.scales.exotic.arabicscale import ArabicScale
@@ -24,6 +26,7 @@ from .models.scales.exotic.augmentedscale import AugmentedScale
 from .models.scales.exotic.balinesescale import BalineseScale
 from .models.scales.exotic.byzantinescale import ByzantineScale
 from .models.scales.exotic.chinesescale import ChineseScale
+from .models.scales.exotic.diminishedscale import DiminishedScale
 
 # Collections
 

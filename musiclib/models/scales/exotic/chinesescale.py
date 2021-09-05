@@ -17,7 +17,7 @@ class ChineseScale(Scale):
     """
 
     def __init__(self, key: Sounds) -> None:
-        """creates instance of balinese tone scale for given key
+        """creates instance of chinese tone scale for given key
 
         :param key: key of scale
         :type key: Sounds
