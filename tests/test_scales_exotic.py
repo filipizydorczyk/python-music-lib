@@ -12,7 +12,8 @@ from .context import (
     DominantDiminishedScale,
     DiminishedBluesScale,
     scale_comparator,
-    EgyptianScale
+    EgyptianScale,
+    EightToneSpanishScale
 )
 
 
@@ -176,3 +177,17 @@ def test_dominant_egyptian_scale_over_ocateve():
     assert scale_comparator(EgyptianScale(Sounds.G),
                             {Sounds.G, Sounds.A, Sounds.C,
                              Sounds.D, Sounds.F, Sounds.G})
+
+
+def test_eight_tone_spanish_scale():
+    assert scale_comparator(EightToneSpanishScale(Sounds.C),
+                            {Sounds.C, Sounds.CIS, Sounds.DIS,
+                             Sounds.E, Sounds.F, Sounds.FIS,
+                             Sounds.GIS, Sounds.AIS})
+
+
+def test_eight_tone_spanish_scale_over_ocateve():
+    assert scale_comparator(EightToneSpanishScale(Sounds.G),
+                            {Sounds.G, Sounds.GIS, Sounds.AIS,
+                             Sounds.B, Sounds.C, Sounds.CIS,
+                             Sounds.DIS, Sounds.F})

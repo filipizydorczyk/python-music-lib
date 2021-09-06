@@ -136,6 +136,14 @@ EgyptianScale
    :members:
    :undoc-members:
    :show-inheritance:    
+   
+EightToneSpanishScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.eighttonespanishscale
+   :members:
+   :undoc-members:
+   :show-inheritance:    
  
 WholeToneScale
 ***********************************************
