@@ -14,7 +14,7 @@ class EightToneSpanishScale(Scale):
     """
 
     def __init__(self, key: Sounds) -> None:
-        """creates instance of dominant diminished scale for given key
+        """creates instance of eight tone spanish scale scale for given key
 
         :param key: key of scale
         :type key: Sounds

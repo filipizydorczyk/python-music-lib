@@ -91,3 +91,47 @@ def test_str_method():
     assert str(Sounds.FIS) == "FIS"
     assert str(Sounds.G) == "G"
     assert str(Sounds.GIS) == "GIS"
+
+
+def test_substract_method_basic():
+    assert Sounds.A.subtract(1) == Sounds.GIS
+    assert Sounds.AIS.subtract(2) == Sounds.GIS
+    assert Sounds.B.subtract(1) == Sounds.AIS
+    assert Sounds.CIS.subtract(1) == Sounds.C
+    assert Sounds.D.subtract(1) == Sounds.CIS
+    assert Sounds.DIS.subtract(3) == Sounds.C
+    assert Sounds.E.subtract(1) == Sounds.DIS
+    assert Sounds.F.subtract(1) == Sounds.E
+    assert Sounds.G.subtract(5) == Sounds.D
+    assert Sounds.GIS.subtract(6) == Sounds.D
+
+
+def test_substract_method_passing_cycle():
+    assert Sounds.C.subtract(1) == Sounds.B
+    assert Sounds.C.subtract(2) == Sounds.AIS
+    assert Sounds.C.subtract(3) == Sounds.A
+    assert Sounds.C.subtract(4) == Sounds.GIS
+    assert Sounds.C.subtract(5) == Sounds.G
+    assert Sounds.C.subtract(6) == Sounds.FIS
+
+
+def test_substract_method_octaves():
+    assert Sounds.C.subtract(13) == Sounds.B
+    assert Sounds.C.subtract(26) == Sounds.AIS
+    assert Sounds.C.subtract(39) == Sounds.A
+
+    assert Sounds.C.subtract(0) == Sounds.C
+    assert Sounds.C.subtract(12) == Sounds.C
+    assert Sounds.C.subtract(24) == Sounds.C
+
+
+def test_substract_method_should_never_return_rest():
+    sound = Sounds.C
+    for i in range(100):
+        assert sound.subtract(i) != Sounds.REST
+
+
+def test_substract_method_should_always_return_rest():
+    sound = Sounds.REST
+    for i in range(100):
+        assert sound.subtract(i) == Sounds.REST

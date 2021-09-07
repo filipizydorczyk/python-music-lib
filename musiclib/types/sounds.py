@@ -42,5 +42,24 @@ class Sounds(IntEnum):
             new_value = 12
         return Sounds(new_value)
 
+    def subtract(self, semitones: Union[int, Intervals]) -> Sounds:
+        """It does the same as add method but in descending order instead of
+        ascending. You will never recive REST with this method unless current
+        sound is REST. Then it will remain rest regardless of provided argument.
+        If you substract 1 from C u will get B etc. 
+
+        :param semitones: how many steps u want to move your sound.
+            It can be provided by amound of semitones or interval name.
+        :type semitones: Union[int, Intervals]
+        :return: new instance of sound after added given steps
+        :rtype: Sounds
+        """
+        if(self.value == Sounds.REST):
+            return Sounds.REST
+        new_value = (self.value - semitones) % 12
+        if(new_value == 0):
+            new_value = 12
+        return Sounds(new_value)
+
     def __str__(self) -> str:
         return super().__str__().split(".")[1]
