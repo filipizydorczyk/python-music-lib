@@ -21,7 +21,7 @@ class EnigmaticMajorScale(Scale):
     """
 
     def __init__(self, key: Sounds, notes_order=NotesOrder.ASCENDING) -> None:
-        """creates instance of eight tone spanish scale for given key
+        """creates instance of enigmatic major scale for given key
 
         :param key: key of scale
         :type key: Sounds
