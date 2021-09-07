@@ -6,7 +6,7 @@ from enum import IntEnum, unique
 
 @unique
 class Sounds(IntEnum):
-    """ Music sounds. These are sounds without octaves to add octaves you need to use this enum im Pithc model.
+    """ Music sounds. These are sounds without octaves to add octaves you need to use this enum im Pitch model.
     REST is no sound at all.
     """
     REST = 0
