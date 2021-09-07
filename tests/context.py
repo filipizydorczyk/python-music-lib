@@ -14,4 +14,5 @@ def scale_comparator(scale: Scale, desired_result: Set[Sounds]) -> bool:
     """
 
     actual_result = scale.get_scale_sounds()
+    print("Diff: ", desired_result.symmetric_difference(actual_result))
     return len(desired_result.symmetric_difference(actual_result)) == 0

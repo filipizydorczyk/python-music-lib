@@ -7,6 +7,7 @@ from .types.chords import Chords
 from .types.dynamics import Dynamics
 from .types.dynamics import Changes
 from .types.articulations import Articulations
+from .types.notesorder import NotesOrder
 
 
 # Models
@@ -31,6 +32,7 @@ from .models.scales.exotic.dominantdiminishedscale import DominantDiminishedScal
 from .models.scales.exotic import DiminishedBluesScale
 from .models.scales.exotic.egyptianscale import EgyptianScale
 from .models.scales.exotic.eighttonespanishscale import EightToneSpanishScale
+from .models.scales.exotic.enigmaticscale import EnigmaticMajorScale
 
 # Collections
 

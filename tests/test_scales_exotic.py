@@ -13,7 +13,9 @@ from .context import (
     DiminishedBluesScale,
     scale_comparator,
     EgyptianScale,
-    EightToneSpanishScale
+    EightToneSpanishScale,
+    EnigmaticMajorScale,
+    NotesOrder
 )
 
 
@@ -191,3 +193,42 @@ def test_eight_tone_spanish_scale_over_ocateve():
                             {Sounds.G, Sounds.GIS, Sounds.AIS,
                              Sounds.B, Sounds.C, Sounds.CIS,
                              Sounds.DIS, Sounds.F})
+
+
+def test_enigmatic_major_scale_default_constructor():
+    for sound in Sounds:
+        assert scale_comparator(EnigmaticMajorScale(sound),
+                                EnigmaticMajorScale(sound,
+                                                    NotesOrder.ASCENDING)
+                                .get_scale_sounds())
+
+
+def test_enigmatic_major_scale_ascending():
+    assert scale_comparator(EnigmaticMajorScale(Sounds.C),
+                            {Sounds.C, Sounds.CIS, Sounds.E,
+                             Sounds.FIS, Sounds.GIS, Sounds.AIS,
+                             Sounds.B})
+
+
+def test_enigmatic_major_scale_ascending_over_octave():
+    assert scale_comparator(EnigmaticMajorScale(Sounds.G,
+                                                NotesOrder.ASCENDING),
+                            {Sounds.G, Sounds.GIS, Sounds.B,
+                             Sounds.CIS, Sounds.DIS, Sounds.F,
+                             Sounds.FIS})
+
+
+def test_enigmatic_major_scale_descending():
+    assert scale_comparator(EnigmaticMajorScale(Sounds.B,
+                                                NotesOrder.DESCENDING),
+                            {Sounds.B, Sounds.AIS, Sounds.A,
+                             Sounds.G, Sounds.E, Sounds.DIS,
+                             Sounds.C})
+
+
+def test_enigmatic_major_scale_descending_over_octave():
+    assert scale_comparator(EnigmaticMajorScale(Sounds.C,
+                                                NotesOrder.DESCENDING),
+                            {Sounds.C, Sounds.B, Sounds.AIS,
+                             Sounds.GIS, Sounds.F, Sounds.E,
+                             Sounds.CIS})

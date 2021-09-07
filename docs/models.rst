@@ -145,6 +145,14 @@ EightToneSpanishScale
    :undoc-members:
    :show-inheritance:    
  
+EnigmaticScales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.enigmaticscale
+   :members:
+   :undoc-members:
+   :show-inheritance:    
+ 
 WholeToneScale
 ***********************************************
    
