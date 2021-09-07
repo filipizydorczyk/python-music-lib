@@ -45,6 +45,13 @@ Note Durations
    :undoc-members:
    :show-inheritance:
 
+Note Orders
+----------------------------
+
+.. automodule:: musiclib.types.notesorder
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 Sounds
 ----------------------------
