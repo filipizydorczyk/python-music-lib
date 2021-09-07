@@ -15,7 +15,8 @@ from .context import (
     EgyptianScale,
     EightToneSpanishScale,
     EnigmaticMajorScale,
-    NotesOrder
+    EnigmaticMinorScale,
+    NotesOrder,
 )
 
 
@@ -232,3 +233,17 @@ def test_enigmatic_major_scale_descending_over_octave():
                             {Sounds.C, Sounds.B, Sounds.AIS,
                              Sounds.GIS, Sounds.F, Sounds.E,
                              Sounds.CIS})
+
+
+def test_enigmatic_minor_scale_descending():
+    assert scale_comparator(EnigmaticMinorScale(Sounds.C),
+                            {Sounds.C, Sounds.CIS, Sounds.DIS,
+                             Sounds.FIS, Sounds.G, Sounds.AIS,
+                             Sounds.B})
+
+
+def test_enigmatic_minor_scale_descending_over_octave():
+    assert scale_comparator(EnigmaticMinorScale(Sounds.G),
+                            {Sounds.G, Sounds.GIS, Sounds.AIS,
+                             Sounds.CIS, Sounds.D, Sounds.F,
+                             Sounds.FIS})

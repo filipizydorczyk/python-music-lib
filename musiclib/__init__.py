@@ -32,7 +32,7 @@ from .models.scales.exotic.dominantdiminishedscale import DominantDiminishedScal
 from .models.scales.exotic import DiminishedBluesScale
 from .models.scales.exotic.egyptianscale import EgyptianScale
 from .models.scales.exotic.eighttonespanishscale import EightToneSpanishScale
-from .models.scales.exotic.enigmaticscale import EnigmaticMajorScale
+from .models.scales.exotic.enigmaticscale import EnigmaticMajorScale, EnigmaticMinorScale
 
 # Collections
 

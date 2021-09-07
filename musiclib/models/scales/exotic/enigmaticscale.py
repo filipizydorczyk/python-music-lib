@@ -50,3 +50,30 @@ class EnigmaticMajorScale(Scale):
                 Intervals.HALF_TONE,
                 Intervals.HALF_TONE,
             ])
+
+
+class EnigmaticMinorScale(Scale):
+    """Here are pictures and notes of the Minor Enigmatic scales 
+    (notice that the minor version is not associated with Giuseppe 
+    Verdi).
+
+
+    :link: https://www.pianoscales.org/enigmatic.html
+    """
+
+    def __init__(self, key: Sounds) -> None:
+        """creates instance of enigmatic minor scale scale for given key
+
+        :param key: key of scale
+        :type key: Sounds
+        """
+
+        super(EnigmaticMinorScale, self).__init__(key, [
+            Intervals.HALF_TONE,
+            Intervals.WHOLE_TONE,
+            Intervals.MINOR_THIRD,
+            Intervals.HALF_TONE,
+            Intervals.MINOR_THIRD,
+            Intervals.HALF_TONE,
+            Intervals.HALF_TONE,
+        ])
