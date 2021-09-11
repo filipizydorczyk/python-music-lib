@@ -61,5 +61,25 @@ class Sounds(IntEnum):
             new_value = 12
         return Sounds(new_value)
 
+    def flat(self) -> Sounds:
+        """It will return current sound decrased by one semitone. In some tunes
+        form example g flat can be diffrent sound than fis but at the moment 
+        this library assume that we use equal temperament tuning.
+
+        :return: flatted sound
+        :rtype: Sounds
+        """
+        return self.subtract(1)
+
+    def sharp(self) -> Sounds:
+        """It will return current sound increased by one semitone. In some tunes
+        form example g flat can be diffrent sound than fis but at the moment 
+        this library assume that we use equal temperament tuning.
+
+        :return: new sound
+        :rtype: Sounds
+        """
+        return self.add(1)
+
     def __str__(self) -> str:
         return super().__str__().split(".")[1]

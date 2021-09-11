@@ -135,3 +135,23 @@ def test_substract_method_should_always_return_rest():
     sound = Sounds.REST
     for i in range(100):
         assert sound.subtract(i) == Sounds.REST
+
+
+def test_sharp_method():
+    assert Sounds.C.sharp() == Sounds.CIS
+    assert Sounds.D.sharp() == Sounds.DIS
+    assert Sounds.E.sharp() == Sounds.F
+    assert Sounds.F.sharp() == Sounds.FIS
+    assert Sounds.G.sharp() == Sounds.GIS
+    assert Sounds.A.sharp() == Sounds.AIS
+    assert Sounds.B.sharp() == Sounds.C
+
+
+def test_flat_method():
+    assert Sounds.C.flat() == Sounds.B
+    assert Sounds.D.flat() == Sounds.CIS
+    assert Sounds.E.flat() == Sounds.DIS
+    assert Sounds.F.flat() == Sounds.E
+    assert Sounds.G.flat() == Sounds.FIS
+    assert Sounds.A.flat() == Sounds.GIS
+    assert Sounds.B.flat() == Sounds.AIS
