@@ -37,6 +37,7 @@ from .models.scales.exotic.geezscale import GeezScale
 from .models.scales.exotic.hawaiianscale import HawaiianScale
 from .models.scales.exotic.hinduscale import HinduScale
 from .models.scales.exotic import AeolianDominantScale
+from .models.scales.exotic.hirajoshiscale import HirajoshiScale
 
 # Collections
 

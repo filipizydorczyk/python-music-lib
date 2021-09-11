@@ -176,6 +176,14 @@ HinduScale/AeolianDominantScale
    :members:
    :undoc-members:
    :show-inheritance:   
+
+HirajoshiScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.hirajoshiscale
+   :members:
+   :undoc-members:
+   :show-inheritance:   
  
 WholeToneScale
 ***********************************************

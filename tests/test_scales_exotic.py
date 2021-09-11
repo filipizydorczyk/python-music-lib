@@ -20,7 +20,8 @@ from .context import (
     GeezScale,
     HawaiianScale,
     HinduScale,
-    AeolianDominantScale
+    AeolianDominantScale,
+    HirajoshiScale
 )
 
 
@@ -299,3 +300,17 @@ def test_aeolian_dominant_same_as_hindu_scale():
     for sound in Sounds:
         assert scale_comparator(AeolianDominantScale(sound),
                                 HinduScale(sound).get_scale_sounds())
+
+
+def test_hirajoshi_scale():
+    assert scale_comparator(HirajoshiScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E.flat(),
+                             Sounds.G, Sounds.A.flat()
+                             })
+
+
+def test_hirajoshi_scale_over_octave():
+    assert scale_comparator(HirajoshiScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B.flat(),
+                             Sounds.D, Sounds.E.flat(),
+                             Sounds.G})
