@@ -63,7 +63,7 @@ class Sounds(IntEnum):
 
     def flat(self) -> Sounds:
         """It will return current sound decrased by one semitone. In some tunes
-        form example g flat can be diffrent sound than fis but at the moment 
+        for example g flat can be diffrent sound than fis but at the moment 
         this library assume that we use equal temperament tuning.
 
         :return: flatted sound
@@ -73,7 +73,7 @@ class Sounds(IntEnum):
 
     def sharp(self) -> Sounds:
         """It will return current sound increased by one semitone. In some tunes
-        form example g flat can be diffrent sound than fis but at the moment 
+        for example g flat can be diffrent sound than fis but at the moment 
         this library assume that we use equal temperament tuning.
 
         :return: new sound
