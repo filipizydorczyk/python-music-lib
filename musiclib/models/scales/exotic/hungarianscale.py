@@ -29,3 +29,27 @@ class HungarianMinorScale(Scale):
             Intervals.MINOR_THIRD,
             Intervals.HALF_TONE
         ])
+
+
+class HungarianMajorScale(Scale):
+    """HungarianMajorScale
+
+    :link: https://www.pianoscales.org/hungarian.html
+    """
+
+    def __init__(self, key: Sounds) -> None:
+        """creates instance of hungarian major scale for given key
+
+        :param key: key of scale
+        :type key: Sounds
+        """
+
+        super(HungarianMajorScale, self).__init__(key, [
+            Intervals.MINOR_THIRD,
+            Intervals.HALF_TONE,
+            Intervals.WHOLE_TONE,
+            Intervals.HALF_TONE,
+            Intervals.WHOLE_TONE,
+            Intervals.HALF_TONE,
+            Intervals.WHOLE_TONE
+        ])

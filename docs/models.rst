@@ -188,7 +188,7 @@ HirajoshiScale
 Hungarian Scales
 ***********************************************
    
-.. automodule:: musiclib.models.scales.exotic.hungarianscales
+.. automodule:: musiclib.models.scales.exotic.hungarianscale
    :members:
    :undoc-members:
    :show-inheritance:   

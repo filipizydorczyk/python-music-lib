@@ -23,7 +23,8 @@ from .context import (
     AeolianDominantScale,
     HirajoshiScale,
     HungarianMinorScale,
-    HungarianGypsyScale
+    HungarianGypsyScale,
+    HungarianMajorScale
 )
 
 
@@ -337,3 +338,18 @@ def test_hungarian_gypsy_scale_as_hungarian_minor():
     for sound in Sounds:
         assert scale_comparator(HungarianGypsyScale(sound),
                                 HungarianMinorScale(sound).get_scale_sounds())
+
+
+def test_hungarian_major_scale():
+    assert scale_comparator(HungarianMajorScale(Sounds.C),
+                            {Sounds.C, Sounds.DIS, Sounds.E,
+                             Sounds.FIS, Sounds.G, Sounds.A,
+                             Sounds.B.flat()
+                             })
+
+
+def test_hungarian_major_scale_over_octave():
+    assert scale_comparator(HungarianMajorScale(Sounds.G),
+                            {Sounds.G, Sounds.AIS, Sounds.B,
+                             Sounds.CIS, Sounds.D, Sounds.E,
+                             Sounds.F})
