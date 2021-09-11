@@ -18,7 +18,9 @@ from .context import (
     EnigmaticMinorScale,
     NotesOrder,
     GeezScale,
-    HawaiianScale
+    HawaiianScale,
+    HinduScale,
+    AeolianDominantScale
 )
 
 
@@ -251,29 +253,49 @@ def test_enigmatic_minor_scale_descending_over_octave():
                              Sounds.FIS})
 
 
-def test_geez_scale_descending():
+def test_geez_scale():
     assert scale_comparator(GeezScale(Sounds.C),
                             {Sounds.C, Sounds.D, Sounds.DIS,
                              Sounds.F, Sounds.G, Sounds.GIS,
                              Sounds.AIS})
 
 
-def test_geez_scale_descending_over_octave():
+def test_geez_scale_over_octave():
     assert scale_comparator(GeezScale(Sounds.G),
                             {Sounds.G, Sounds.A, Sounds.AIS,
                              Sounds.C, Sounds.D, Sounds.DIS,
                              Sounds.F})
 
 
-def test_hawaiian_scale_descending():
+def test_hawaiian_scale():
     assert scale_comparator(HawaiianScale(Sounds.C),
                             {Sounds.C, Sounds.D, Sounds.DIS,
                              Sounds.F, Sounds.G, Sounds.A,
                              Sounds.B})
 
 
-def test_hawaiian_scale_descending_over_octave():
+def test_hawaiian_scale_over_octave():
     assert scale_comparator(HawaiianScale(Sounds.G),
                             {Sounds.G, Sounds.A, Sounds.AIS,
                              Sounds.C, Sounds.D, Sounds.E,
                              Sounds.FIS})
+
+
+def test_hindu_scale():
+    assert scale_comparator(HinduScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E,
+                             Sounds.F, Sounds.G, Sounds.A.flat(),
+                             Sounds.B.flat()})
+
+
+def test_hindu_scale_over_octave():
+    assert scale_comparator(HinduScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B,
+                             Sounds.C, Sounds.D, Sounds.E.flat(),
+                             Sounds.F})
+
+
+def test_aeolian_dominant_same_as_hindu_scale():
+    for sound in Sounds:
+        assert scale_comparator(AeolianDominantScale(sound),
+                                HinduScale(sound).get_scale_sounds())

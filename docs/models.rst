@@ -168,6 +168,14 @@ HawaiianScale
    :members:
    :undoc-members:
    :show-inheritance:   
+   
+HinduScale/AeolianDominantScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.hinduscale
+   :members:
+   :undoc-members:
+   :show-inheritance:   
  
 WholeToneScale
 ***********************************************
