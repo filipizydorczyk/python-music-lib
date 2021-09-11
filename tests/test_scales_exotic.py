@@ -21,7 +21,9 @@ from .context import (
     HawaiianScale,
     HinduScale,
     AeolianDominantScale,
-    HirajoshiScale
+    HirajoshiScale,
+    HungarianMinorScale,
+    HungarianGypsyScale
 )
 
 
@@ -314,3 +316,24 @@ def test_hirajoshi_scale_over_octave():
                             {Sounds.G, Sounds.A, Sounds.B.flat(),
                              Sounds.D, Sounds.E.flat(),
                              Sounds.G})
+
+
+def test_hungarian_minor_scale():
+    assert scale_comparator(HungarianMinorScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E.flat(),
+                             Sounds.FIS, Sounds.G, Sounds.A.flat(),
+                             Sounds.B
+                             })
+
+
+def test_hungarian_minor_scale_over_octave():
+    assert scale_comparator(HungarianMinorScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B.flat(),
+                             Sounds.CIS, Sounds.D, Sounds.E.flat(),
+                             Sounds.FIS})
+
+
+def test_hungarian_gypsy_scale_as_hungarian_minor():
+    for sound in Sounds:
+        assert scale_comparator(HungarianGypsyScale(sound),
+                                HungarianMinorScale(sound).get_scale_sounds())

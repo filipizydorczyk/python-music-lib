@@ -184,6 +184,14 @@ HirajoshiScale
    :members:
    :undoc-members:
    :show-inheritance:   
+
+Hungarian Scales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.hungarianscales
+   :members:
+   :undoc-members:
+   :show-inheritance:   
  
 WholeToneScale
 ***********************************************

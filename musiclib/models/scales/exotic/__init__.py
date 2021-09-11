@@ -1,2 +1,3 @@
 from .dominantdiminishedscale import DominantDiminishedScale as DiminishedBluesScale
 from .hinduscale import HinduScale as AeolianDominantScale
+from .hungarianscales import HungarianMinorScale as HungarianGypsyScale

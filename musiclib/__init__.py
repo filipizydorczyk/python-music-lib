@@ -38,6 +38,8 @@ from .models.scales.exotic.hawaiianscale import HawaiianScale
 from .models.scales.exotic.hinduscale import HinduScale
 from .models.scales.exotic import AeolianDominantScale
 from .models.scales.exotic.hirajoshiscale import HirajoshiScale
+from .models.scales.exotic.hungarianscales import HungarianMinorScale
+from .models.scales.exotic import HungarianGypsyScale
 
 # Collections
 
