@@ -152,6 +152,14 @@ EnigmaticScales
    :members:
    :undoc-members:
    :show-inheritance:    
+
+GeezScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.geezscale
+   :members:
+   :undoc-members:
+   :show-inheritance:     
  
 WholeToneScale
 ***********************************************

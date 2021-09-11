@@ -17,6 +17,7 @@ from .context import (
     EnigmaticMajorScale,
     EnigmaticMinorScale,
     NotesOrder,
+    GeezScale
 )
 
 
@@ -247,3 +248,17 @@ def test_enigmatic_minor_scale_descending_over_octave():
                             {Sounds.G, Sounds.GIS, Sounds.AIS,
                              Sounds.CIS, Sounds.D, Sounds.F,
                              Sounds.FIS})
+
+
+def test_geez_minor_scale_descending():
+    assert scale_comparator(GeezScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.DIS,
+                             Sounds.F, Sounds.G, Sounds.GIS,
+                             Sounds.AIS})
+
+
+def test_geez_minor_scale_descending_over_octave():
+    assert scale_comparator(GeezScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.AIS,
+                             Sounds.C, Sounds.D, Sounds.DIS,
+                             Sounds.F})
