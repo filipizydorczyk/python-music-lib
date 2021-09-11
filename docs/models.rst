@@ -160,6 +160,14 @@ GeezScale
    :members:
    :undoc-members:
    :show-inheritance:     
+
+HawaiianScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.hawaiianscale
+   :members:
+   :undoc-members:
+   :show-inheritance:   
  
 WholeToneScale
 ***********************************************

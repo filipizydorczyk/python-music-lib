@@ -34,6 +34,7 @@ from .models.scales.exotic.egyptianscale import EgyptianScale
 from .models.scales.exotic.eighttonespanishscale import EightToneSpanishScale
 from .models.scales.exotic.enigmaticscale import EnigmaticMajorScale, EnigmaticMinorScale
 from .models.scales.exotic.geezscale import GeezScale
+from .models.scales.exotic.hawaiianscale import HawaiianScale
 
 # Collections
 
