@@ -12,6 +12,8 @@ class HinduScale(Scale):
     third note in the scale that is raised one semi-step. It can also be 
     compared to the Mixolydian mode, only the sixth note differs.
 
+    U can reffer to it also as musiclib.models.scales.exotic.AeolianDominantScale
+
     :link: https://www.pianoscales.org/aeolian-dominant.html
     """
 
