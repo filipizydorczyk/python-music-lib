@@ -193,6 +193,14 @@ Hungarian Scales
    :undoc-members:
    :show-inheritance:   
  
+IwatoScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.iwatoscale
+   :members:
+   :undoc-members:
+   :show-inheritance:   
+ 
 WholeToneScale
 ***********************************************
    

@@ -41,6 +41,7 @@ from .models.scales.exotic.hirajoshiscale import HirajoshiScale
 from .models.scales.exotic.hungarianscale import HungarianMinorScale
 from .models.scales.exotic import HungarianGypsyScale
 from .models.scales.exotic.hungarianscale import HungarianMajorScale
+from .models.scales.exotic.iwatoscale import IwatoScale
 
 # Collections
 

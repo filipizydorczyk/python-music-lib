@@ -24,7 +24,8 @@ from .context import (
     HirajoshiScale,
     HungarianMinorScale,
     HungarianGypsyScale,
-    HungarianMajorScale
+    HungarianMajorScale,
+    IwatoScale
 )
 
 
@@ -353,3 +354,16 @@ def test_hungarian_major_scale_over_octave():
                             {Sounds.G, Sounds.AIS, Sounds.B,
                              Sounds.CIS, Sounds.D, Sounds.E,
                              Sounds.F})
+
+
+def test_iwato_scale():
+    assert scale_comparator(IwatoScale(Sounds.C),
+                            {Sounds.C, Sounds.D.flat(), Sounds.F,
+                             Sounds.G.flat(), Sounds.B.flat()
+                             })
+
+
+def test_iwato_scale_over_octave():
+    assert scale_comparator(IwatoScale(Sounds.G),
+                            {Sounds.G, Sounds.A.flat(), Sounds.C,
+                             Sounds.D.flat(), Sounds.F})
