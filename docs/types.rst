@@ -76,4 +76,12 @@ Articulations
    :members:
    :undoc-members:
    :show-inheritance:
+   
+ScaleTypes
+----------------------------
+
+.. automodule:: musiclib.types.scaletypes
+   :members:
+   :undoc-members:
+   :show-inheritance:   
 

@@ -1,6 +1,7 @@
 from typing import Set, List
 from musiclib.types.intervals import Intervals
 from musiclib.types.sounds import Sounds
+from musiclib.types.scaletypes import ScaleTypes
 
 
 class Scale:
@@ -31,3 +32,12 @@ class Scale:
         :rtype: Set[Sounds]
         """
         return self.__sounds.copy()
+
+    def get_scale_type(self) -> ScaleTypes:
+        """get type of scale based on number of notes in it
+
+        :return: type of scale
+        :rtype: ScaleTypes
+        """
+
+        return ScaleTypes(len(self.get_scale_sounds()))

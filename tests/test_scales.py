@@ -1,6 +1,17 @@
+from musiclib.types.scaletypes import ScaleTypes
 from musiclib.types.sounds import Sounds
-from .context import MajorScale, MinorScale, scale_comparator
+from .context import MajorScale, MinorScale, scale_comparator, IwatoScale, BalineseScale, DiminishedScale, EightToneSpanishScale
 import pytest
+
+
+def test_get_scale_type_method():
+    assert IwatoScale(Sounds.C).get_scale_type() == ScaleTypes.PENTATONIC
+    assert MajorScale(Sounds.C).get_scale_type() == ScaleTypes.HEPTATONIC
+    assert MinorScale(Sounds.C).get_scale_type() == ScaleTypes.HEPTATONIC
+    assert BalineseScale(Sounds.C).get_scale_type() == ScaleTypes.PENTATONIC
+    assert DiminishedScale(Sounds.C).get_scale_type() == ScaleTypes.OCTATONIC
+    assert EightToneSpanishScale(
+        Sounds.C).get_scale_type() == ScaleTypes.OCTATONIC
 
 
 def test_major_scale():
