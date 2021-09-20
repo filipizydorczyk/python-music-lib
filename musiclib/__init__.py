@@ -46,6 +46,7 @@ from .models.scales.exotic.japanesescale import JapaneseScale
 from .models.scales.exotic.lydiandominantscale import LydianDominantScale
 from .models.scales.exotic import Lydianb7Scale
 from .models.scales.exotic.neapolitanscale import NeapolitanMinorScale
+from .models.scales.exotic.neapolitanscale import NeapolitanMajorScale
 
 # Collections
 

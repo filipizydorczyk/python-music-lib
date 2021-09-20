@@ -29,7 +29,8 @@ from .context import (
     JapaneseScale,
     Lydianb7Scale,
     LydianDominantScale,
-    NeapolitanMinorScale
+    NeapolitanMinorScale,
+    NeapolitanMajorScale
 )
 
 
@@ -435,7 +436,7 @@ def test_lydiandominantscale_same_as_lydianb7scale():
                                 Lydianb7Scale(sound).get_scale_sounds())
 
 
-def test_neapolitan_scale():
+def test_neapolitan_minor_scale():
     assert scale_comparator(NeapolitanMinorScale(Sounds.C),
                             {Sounds.C, Sounds.D.flat(), Sounds.E.flat(),
                              Sounds.F, Sounds.G, Sounds.A.flat(),
@@ -443,9 +444,23 @@ def test_neapolitan_scale():
                              })
 
 
-def test_neapolitan_scale_over_octave():
+def test_neapolitan_minor_scale_over_octave():
     assert scale_comparator(NeapolitanMinorScale(Sounds.G),
                             {Sounds.G, Sounds.A.flat(), Sounds.B.flat(),
                              Sounds.C, Sounds.D, Sounds.E.flat(),
                              Sounds.FIS
+                             })
+
+
+def test_neapolitan_major_scale():
+    assert scale_comparator(NeapolitanMajorScale(Sounds.C),
+                            {Sounds.C, Sounds.D.flat(), Sounds.E.flat(),
+                             Sounds.F, Sounds.G, Sounds.A, Sounds.B
+                             })
+
+
+def test_neapolitan_major_scale_over_octave():
+    assert scale_comparator(NeapolitanMajorScale(Sounds.G),
+                            {Sounds.G, Sounds.A.flat(), Sounds.B.flat(),
+                             Sounds.C, Sounds.D, Sounds.E, Sounds.FIS
                              })
