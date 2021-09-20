@@ -216,6 +216,14 @@ LydianDominantScale
    :members:
    :undoc-members:
    :show-inheritance:  
+
+Neapolitan Scales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.neapolitanscale
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************
