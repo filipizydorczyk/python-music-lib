@@ -26,7 +26,9 @@ from .context import (
     HungarianGypsyScale,
     HungarianMajorScale,
     IwatoScale,
-    JapaneseScale
+    JapaneseScale,
+    Lydianb7Scale,
+    LydianDominantScale
 )
 
 
@@ -395,3 +397,38 @@ def test_japanese_scale_reocuring():
                             JapaneseScale(Sounds.A.flat()).get_scale_sounds())
     assert scale_comparator(JapaneseScale(Sounds.AIS),
                             JapaneseScale(Sounds.B.flat()).get_scale_sounds())
+
+
+def test_lydiandominantscale_scale():
+    assert scale_comparator(LydianDominantScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E,
+                             Sounds.FIS, Sounds.G, Sounds.A,
+                             Sounds.B.flat()
+                             })
+
+
+def test_lydiandominantscale_scale_over_octave():
+    assert scale_comparator(LydianDominantScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B,
+                             Sounds.CIS, Sounds.D, Sounds.E,
+                             Sounds.F
+                             })
+
+
+def test_lydiandominantscale_scale_reocuring():
+    assert scale_comparator(LydianDominantScale(Sounds.CIS),
+                            LydianDominantScale(Sounds.D.flat()).get_scale_sounds())
+    assert scale_comparator(LydianDominantScale(Sounds.DIS),
+                            LydianDominantScale(Sounds.E.flat()).get_scale_sounds())
+    assert scale_comparator(LydianDominantScale(Sounds.FIS),
+                            LydianDominantScale(Sounds.G.flat()).get_scale_sounds())
+    assert scale_comparator(LydianDominantScale(Sounds.GIS),
+                            LydianDominantScale(Sounds.A.flat()).get_scale_sounds())
+    assert scale_comparator(LydianDominantScale(Sounds.AIS),
+                            LydianDominantScale(Sounds.B.flat()).get_scale_sounds())
+
+
+def test_lydiandominantscale_same_as_lydianb7scale():
+    for sound in Sounds:
+        assert scale_comparator(LydianDominantScale(sound),
+                                Lydianb7Scale(sound).get_scale_sounds())

@@ -208,6 +208,14 @@ JapaneseScale
    :members:
    :undoc-members:
    :show-inheritance:   
+
+LydianDominantScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.lydiandominantscale
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************
