@@ -25,7 +25,8 @@ from .context import (
     HungarianMinorScale,
     HungarianGypsyScale,
     HungarianMajorScale,
-    IwatoScale
+    IwatoScale,
+    JapaneseScale
 )
 
 
@@ -367,3 +368,30 @@ def test_iwato_scale_over_octave():
     assert scale_comparator(IwatoScale(Sounds.G),
                             {Sounds.G, Sounds.A.flat(), Sounds.C,
                              Sounds.D.flat(), Sounds.F})
+
+
+def test_japanese_scale():
+    assert scale_comparator(JapaneseScale(Sounds.C),
+                            {Sounds.C, Sounds.D.flat(),
+                             Sounds.F, Sounds.G, Sounds.B.flat()
+                             })
+
+
+def test_japanese_scale_over_octave():
+    assert scale_comparator(JapaneseScale(Sounds.G),
+                            {Sounds.G, Sounds.A.flat(),
+                             Sounds.C, Sounds.D, Sounds.F
+                             })
+
+
+def test_japanese_scale_reocuring():
+    assert scale_comparator(JapaneseScale(Sounds.CIS),
+                            JapaneseScale(Sounds.D.flat()).get_scale_sounds())
+    assert scale_comparator(JapaneseScale(Sounds.DIS),
+                            JapaneseScale(Sounds.E.flat()).get_scale_sounds())
+    assert scale_comparator(JapaneseScale(Sounds.FIS),
+                            JapaneseScale(Sounds.G.flat()).get_scale_sounds())
+    assert scale_comparator(JapaneseScale(Sounds.GIS),
+                            JapaneseScale(Sounds.A.flat()).get_scale_sounds())
+    assert scale_comparator(JapaneseScale(Sounds.AIS),
+                            JapaneseScale(Sounds.B.flat()).get_scale_sounds())

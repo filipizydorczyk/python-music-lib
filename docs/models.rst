@@ -200,6 +200,14 @@ IwatoScale
    :members:
    :undoc-members:
    :show-inheritance:   
+
+JapaneseScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.japanesescale
+   :members:
+   :undoc-members:
+   :show-inheritance:   
  
 WholeToneScale
 ***********************************************
