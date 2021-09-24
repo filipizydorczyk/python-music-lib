@@ -37,7 +37,8 @@ from .context import (
     PrometheusScale,
     RomanianMinorScale,
     SpanishGypsyScale,
-    PhrygianDominantScale
+    PhrygianDominantScale,
+    SuperLocrianScale
 )
 
 
@@ -572,3 +573,19 @@ def test_spanish_gypsy_scale_as_phrygian_dominant():
     for sound in Sounds:
         assert scale_comparator(SpanishGypsyScale(sound),
                                 PhrygianDominantScale(sound).get_scale_sounds())
+
+
+def test_super_locrain_scale():
+    assert scale_comparator(SuperLocrianScale(Sounds.C),
+                            {Sounds.C, Sounds.D.flat(), Sounds.DIS,
+                             Sounds.E, Sounds.G.flat(), Sounds.GIS,
+                             Sounds.B.flat()
+                             })
+
+
+def test_super_locrain_scale_over_octave():
+    assert scale_comparator(SuperLocrianScale(Sounds.G),
+                            {Sounds.G, Sounds.A.flat(), Sounds.AIS,
+                             Sounds.B, Sounds.D.flat(), Sounds.DIS,
+                             Sounds.F
+                             })

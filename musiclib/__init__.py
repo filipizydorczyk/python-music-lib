@@ -54,6 +54,7 @@ from .models.scales.exotic.prometheusscale import PrometheusScale
 from .models.scales.exotic.romanianminorscales import RomanianMinorScale
 from .models.scales.exotic.spanishgypsyscale import SpanishGypsyScale
 from .models.scales.exotic import PhrygianDominantScale
+from .models.scales.exotic.superlocrianscale import SuperLocrianScale
 
 # Collections
 

@@ -264,6 +264,14 @@ Spanish Gypsy Scales (Phrygian Dominant)
    :members:
    :undoc-members:
    :show-inheritance:  
+
+Super Locrian Scales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.superlocrianscale
+   :members:
+   :undoc-members:
+   :show-inheritance: 
  
 WholeToneScale
 ***********************************************
