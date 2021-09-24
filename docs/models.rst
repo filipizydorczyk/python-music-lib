@@ -256,6 +256,14 @@ RomanianMinorScale
    :members:
    :undoc-members:
    :show-inheritance:  
+
+Spanish Gypsy Scales (Phrygian Dominant)
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.spanishgypsyscale
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************

@@ -35,7 +35,9 @@ from .context import (
     OctatonicWholeHalfScale,
     OrientalScale,
     PrometheusScale,
-    RomanianMinorScale
+    RomanianMinorScale,
+    SpanishGypsyScale,
+    PhrygianDominantScale
 )
 
 
@@ -548,3 +550,25 @@ def test_romanian_minor_scale_over_octave():
                              Sounds.CIS, Sounds.D,  Sounds.E,
                              Sounds.F, Sounds.G
                              })
+
+
+def test_spanish_gypsy_scale():
+    assert scale_comparator(SpanishGypsyScale(Sounds.C),
+                            {Sounds.C, Sounds.D.flat(), Sounds.E,
+                             Sounds.F, Sounds.G, Sounds.A.flat(),
+                             Sounds.B.flat()
+                             })
+
+
+def test_spanish_gypsy_scale_over_octave():
+    assert scale_comparator(SpanishGypsyScale(Sounds.G),
+                            {Sounds.G, Sounds.A.flat(), Sounds.B,
+                             Sounds.C, Sounds.D, Sounds.E.flat(),
+                             Sounds.F, Sounds.G
+                             })
+
+
+def test_spanish_gypsy_scale_as_phrygian_dominant():
+    for sound in Sounds:
+        assert scale_comparator(SpanishGypsyScale(sound),
+                                PhrygianDominantScale(sound).get_scale_sounds())
