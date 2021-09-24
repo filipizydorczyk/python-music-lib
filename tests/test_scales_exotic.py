@@ -34,7 +34,8 @@ from .context import (
     OctatonicHalfWholeScale,
     OctatonicWholeHalfScale,
     OrientalScale,
-    PrometheusScale
+    PrometheusScale,
+    RomanianMinorScale
 )
 
 
@@ -530,4 +531,20 @@ def test_phrometeus_scale_over_octave():
                             {Sounds.G, Sounds.A, Sounds.B,
                              Sounds.CIS, Sounds.E, Sounds.F,
                              Sounds.G
+                             })
+
+
+def test_romanian_minor_scale():
+    assert scale_comparator(RomanianMinorScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E.flat(),
+                             Sounds.FIS, Sounds.G, Sounds.A,
+                             Sounds.B.flat()
+                             })
+
+
+def test_romanian_minor_scale_over_octave():
+    assert scale_comparator(RomanianMinorScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B.flat(),
+                             Sounds.CIS, Sounds.D,  Sounds.E,
+                             Sounds.F, Sounds.G
                              })

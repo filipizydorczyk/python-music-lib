@@ -248,6 +248,14 @@ PrometheusScale
    :members:
    :undoc-members:
    :show-inheritance:  
+
+RomanianMinorScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.romanianminorscales
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************

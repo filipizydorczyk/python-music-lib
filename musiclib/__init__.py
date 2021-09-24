@@ -51,6 +51,7 @@ from .models.scales.exotic.octatonicscales import OctatonicHalfWholeScale
 from .models.scales.exotic.octatonicscales import OctatonicWholeHalfScale
 from .models.scales.exotic.orientalscales import OrientalScale
 from .models.scales.exotic.prometheusscale import PrometheusScale
+from .models.scales.exotic.romanianminorscales import RomanianMinorScale
 
 # Collections
 
