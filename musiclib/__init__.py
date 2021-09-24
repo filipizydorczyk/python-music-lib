@@ -49,6 +49,7 @@ from .models.scales.exotic.neapolitanscale import NeapolitanMinorScale
 from .models.scales.exotic.neapolitanscale import NeapolitanMajorScale
 from .models.scales.exotic.octatonicscales import OctatonicHalfWholeScale
 from .models.scales.exotic.octatonicscales import OctatonicWholeHalfScale
+from .models.scales.exotic.orientalscales import OrientalScale
 
 # Collections
 

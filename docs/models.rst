@@ -232,6 +232,14 @@ Octatonic Scales
    :members:
    :undoc-members:
    :show-inheritance:  
+
+Oriental Scales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.orientalscales
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************
