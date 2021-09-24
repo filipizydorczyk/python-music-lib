@@ -240,6 +240,14 @@ Oriental Scales
    :members:
    :undoc-members:
    :show-inheritance:  
+
+PrometheusScale
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.prometheusscale
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************

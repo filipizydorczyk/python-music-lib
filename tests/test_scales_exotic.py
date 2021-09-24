@@ -33,7 +33,8 @@ from .context import (
     NeapolitanMajorScale,
     OctatonicHalfWholeScale,
     OctatonicWholeHalfScale,
-    OrientalScale
+    OrientalScale,
+    PrometheusScale
 )
 
 
@@ -514,4 +515,19 @@ def test_oriental_scale_over_octave():
                             {Sounds.G, Sounds.A.flat(), Sounds.B,
                              Sounds.C, Sounds.D.flat(), Sounds.E,
                              Sounds.F, Sounds.G
+                             })
+
+
+def test_phrometeus_scale():
+    assert scale_comparator(PrometheusScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.E,
+                             Sounds.FIS, Sounds.A, Sounds.B.flat()
+                             })
+
+
+def test_phrometeus_scale_over_octave():
+    assert scale_comparator(PrometheusScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.B,
+                             Sounds.CIS, Sounds.E, Sounds.F,
+                             Sounds.G
                              })
