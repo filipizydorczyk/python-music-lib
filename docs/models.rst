@@ -273,6 +273,14 @@ Super Locrian Scales
    :undoc-members:
    :show-inheritance: 
  
+Yo Scales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.yoscale
+   :members:
+   :undoc-members:
+   :show-inheritance:  
+ 
 WholeToneScale
 ***********************************************
    

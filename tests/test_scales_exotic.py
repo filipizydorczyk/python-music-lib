@@ -38,7 +38,8 @@ from .context import (
     RomanianMinorScale,
     SpanishGypsyScale,
     PhrygianDominantScale,
-    SuperLocrianScale
+    SuperLocrianScale,
+    YoScale
 )
 
 
@@ -588,4 +589,18 @@ def test_super_locrain_scale_over_octave():
                             {Sounds.G, Sounds.A.flat(), Sounds.AIS,
                              Sounds.B, Sounds.D.flat(), Sounds.DIS,
                              Sounds.F
+                             })
+
+
+def test_yo_scale():
+    assert scale_comparator(YoScale(Sounds.C),
+                            {Sounds.C, Sounds.D, Sounds.F,
+                             Sounds.G, Sounds.A,
+                             })
+
+
+def test_yo_scale_over_octave():
+    assert scale_comparator(YoScale(Sounds.G),
+                            {Sounds.G, Sounds.A, Sounds.C,
+                             Sounds.D, Sounds.E,
                              })
