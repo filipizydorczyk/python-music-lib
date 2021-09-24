@@ -224,6 +224,14 @@ Neapolitan Scales
    :members:
    :undoc-members:
    :show-inheritance:  
+
+Octatonic Scales
+***********************************************
+   
+.. automodule:: musiclib.models.scales.exotic.octatonicscales
+   :members:
+   :undoc-members:
+   :show-inheritance:  
  
 WholeToneScale
 ***********************************************

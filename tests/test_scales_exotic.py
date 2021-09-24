@@ -30,7 +30,8 @@ from .context import (
     Lydianb7Scale,
     LydianDominantScale,
     NeapolitanMinorScale,
-    NeapolitanMajorScale
+    NeapolitanMajorScale,
+    OctatonicHalfWholeScale
 )
 
 
@@ -463,4 +464,20 @@ def test_neapolitan_major_scale_over_octave():
     assert scale_comparator(NeapolitanMajorScale(Sounds.G),
                             {Sounds.G, Sounds.A.flat(), Sounds.B.flat(),
                              Sounds.C, Sounds.D, Sounds.E, Sounds.FIS
+                             })
+
+
+def test_octatonic_half_whole_scale():
+    assert scale_comparator(OctatonicHalfWholeScale(Sounds.C),
+                            {Sounds.C, Sounds.D.flat(), Sounds.E.flat(),
+                             Sounds.E, Sounds.G.flat(), Sounds.G, Sounds.A,
+                             Sounds.B.flat()
+                             })
+
+
+def test_octatonic_half_whole_scale_over_octave():
+    assert scale_comparator(OctatonicHalfWholeScale(Sounds.G),
+                            {Sounds.G, Sounds.A.flat(), Sounds.B.flat(),
+                             Sounds.B, Sounds.D.flat(), Sounds.D, Sounds.E,
+                             Sounds.F
                              })
