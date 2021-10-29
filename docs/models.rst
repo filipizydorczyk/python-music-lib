@@ -61,13 +61,14 @@ MinorScale
    :undoc-members:
    :show-inheritance:
 
-MinorPentatonicScale
+Pentatonic Scales
 ***********************************************
 
 .. automodule:: musiclib.models.scales.pentatonicscale
    :members:
    :undoc-members:
    :show-inheritance:
+
 
 
 Exotic scales

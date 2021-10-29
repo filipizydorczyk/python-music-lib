@@ -1,0 +1,1 @@
+from .pentatonicscale import MinorPentatonicScale as PentatonicScale

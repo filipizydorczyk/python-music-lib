@@ -1,6 +1,6 @@
 from musiclib.types.scaletypes import ScaleTypes
 from musiclib.types.sounds import Sounds
-from .context import MajorScale, MinorScale, scale_comparator, IwatoScale, BalineseScale, DiminishedScale, EightToneSpanishScale, MinorPentatonicScale
+from .context import MajorScale, MinorScale, scale_comparator, IwatoScale, BalineseScale, DiminishedScale, EightToneSpanishScale, MinorPentatonicScale, MajorPentatonicScale, PentatonicScale
 import pytest
 
 
@@ -42,3 +42,14 @@ def test_minor_pentatonic_scale_over_octave():
     assert scale_comparator(MinorPentatonicScale(Sounds.A),
                             {Sounds.A, Sounds.C,
                              Sounds.D, Sounds.E, Sounds.G, })
+
+
+def test_major_pentatonic_scale_over_octave():
+    assert scale_comparator(MajorPentatonicScale(Sounds.E),
+                            {Sounds.E, Sounds.FIS,
+                             Sounds.GIS, Sounds.B, Sounds.CIS, })
+
+
+def test_minor_pentatonic_scale_should_be_default():
+    assert scale_comparator(MinorPentatonicScale(Sounds.E),
+                            PentatonicScale(Sounds.E).get_scale_sounds())
