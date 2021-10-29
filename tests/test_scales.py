@@ -14,7 +14,8 @@ from .context import (
     MajorPentatonicScale,
     PentatonicScale,
     NaturalMinorScale,
-    MelodicMinorScale
+    MelodicMinorScale,
+    HarmonicMinorScale
 )
 
 
@@ -90,3 +91,9 @@ def test_melodic_minor_scale_descending():
     ),
         {Sounds.E, Sounds.FIS, Sounds.G,
          Sounds.A, Sounds.B, Sounds.C, Sounds.D})
+
+
+def test_harmonic_minor_scale_should_be_default():
+    assert scale_comparator(HarmonicMinorScale(Sounds.E),
+                            {Sounds.E, Sounds.FIS, Sounds.G,
+                             Sounds.A, Sounds.B, Sounds.C, Sounds.DIS})

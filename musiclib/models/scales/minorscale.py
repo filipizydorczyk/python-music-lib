@@ -68,3 +68,32 @@ class MelodicMinorScale(Scale):
                 Intervals.WHOLE_TONE,
                 Intervals.WHOLE_TONE,
             ])
+
+
+class HarmonicMinorScale(Scale):
+    """The Harmonic Minor differs from the Natural Minor by 
+    the sharpened seventh note, and this minor scale is 
+    consequently not played in the same way as the relative 
+    major scale. The less common Harmonic Major scale can 
+    instead be seen as a relative to the Harmonic minor.
+
+    :link: https://www.pianoscales.org/minor-harmonic.html
+    """
+
+    def __init__(self, key: Sounds) -> None:
+        """creates instance of harmonic minor scale for given key
+
+        :param key: key of scale
+        :type key: Sounds
+        """
+
+        super(HarmonicMinorScale, self).__init__(key, [
+            Intervals.WHOLE_TONE,
+            Intervals.HALF_TONE,
+            Intervals.WHOLE_TONE,
+            Intervals.WHOLE_TONE,
+            Intervals.HALF_TONE,
+            Intervals.MINOR_THIRD,
+            Intervals.HALF_TONE,
+
+        ])

@@ -24,6 +24,7 @@ from .models.scales.pentatonicscale import MinorPentatonicScale
 from .models.scales.pentatonicscale import MajorPentatonicScale
 from .models.scales import PentatonicScale
 from .models.scales.minorscale import MelodicMinorScale
+from .models.scales.minorscale import HarmonicMinorScale
 
 from .models.scales.exotic.wholetonescale import WholeToneScale
 from .models.scales.exotic.algerianscale import AlgerianScales
