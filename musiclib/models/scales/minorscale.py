@@ -3,7 +3,7 @@ from musiclib.types.intervals import Intervals
 from musiclib.types.sounds import Sounds
 
 
-class MinorScale(Scale):
+class NaturalMinorScale(Scale):
     """This class contains set of sounds in minor scale for given key.
     """
 
@@ -14,7 +14,7 @@ class MinorScale(Scale):
         :type key: Sounds
         """
 
-        super(MinorScale, self).__init__(key, [
+        super(NaturalMinorScale, self).__init__(key, [
             Intervals.WHOLE_TONE,
             Intervals.HALF_STEP,
             Intervals.WHOLE_TONE,

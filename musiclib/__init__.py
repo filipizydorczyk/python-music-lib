@@ -17,7 +17,8 @@ from .models.pitch import Pitch
 from .models.chord import Chord
 
 from .models.scales.majorscale import MajorScale
-from .models.scales.minorscale import MinorScale
+from .models.scales.minorscale import NaturalMinorScale
+from .models.scales import MinorScale
 from .models.scales.scale import Scale
 from .models.scales.pentatonicscale import MinorPentatonicScale
 from .models.scales.pentatonicscale import MajorPentatonicScale

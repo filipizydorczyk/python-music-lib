@@ -1,7 +1,19 @@
+import pytest
 from musiclib.types.scaletypes import ScaleTypes
 from musiclib.types.sounds import Sounds
-from .context import MajorScale, MinorScale, scale_comparator, IwatoScale, BalineseScale, DiminishedScale, EightToneSpanishScale, MinorPentatonicScale, MajorPentatonicScale, PentatonicScale
-import pytest
+from .context import (
+    MajorScale,
+    MinorScale,
+    scale_comparator,
+    IwatoScale,
+    BalineseScale,
+    DiminishedScale,
+    EightToneSpanishScale,
+    MinorPentatonicScale,
+    MajorPentatonicScale,
+    PentatonicScale,
+    NaturalMinorScale
+)
 
 
 def test_get_scale_type_method():
@@ -27,13 +39,18 @@ def test_major_scale_over_ocatve():
 
 
 def test_minor_scale():
-    assert scale_comparator(MinorScale(Sounds.C),
+    assert scale_comparator(NaturalMinorScale(Sounds.C),
                             {Sounds.C, Sounds.D, Sounds.DIS,
                              Sounds.F, Sounds.G, Sounds.GIS, Sounds.AIS})
 
 
+def test_default_minor_scale():
+    assert scale_comparator(MinorScale(Sounds.C),
+                            NaturalMinorScale(Sounds.C).get_scale_sounds())
+
+
 def test_minor_scale_over_octave():
-    assert scale_comparator(MinorScale(Sounds.A),
+    assert scale_comparator(NaturalMinorScale(Sounds.A),
                             {Sounds.A, Sounds.B, Sounds.C,
                              Sounds.D, Sounds.E, Sounds.F, Sounds.G})
 
