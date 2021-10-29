@@ -15,7 +15,11 @@ Pithces List
    :show-inheritance:
 
 
+Circle of fifths
+----------------------------
 
-
-
+.. automodule:: musiclib.collections.circleoffifths
+   :members:
+   :undoc-members:
+   :show-inheritance:
 

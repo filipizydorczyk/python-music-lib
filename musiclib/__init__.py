@@ -60,6 +60,7 @@ from .models.scales.exotic.yoscale import YoScale
 # Collections
 
 from .collections.pitcheslist import PitchesList
+from .collections.circleoffifths import CircleOfFifths
 
 # Utils
 
