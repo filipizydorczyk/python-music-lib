@@ -53,7 +53,7 @@ MajorScale
    :undoc-members:
    :show-inheritance:
 
-MinorScale
+Minor Scales
 ***********************************************
 
 .. automodule:: musiclib.models.scales.minorscale

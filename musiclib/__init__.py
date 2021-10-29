@@ -23,6 +23,7 @@ from .models.scales.scale import Scale
 from .models.scales.pentatonicscale import MinorPentatonicScale
 from .models.scales.pentatonicscale import MajorPentatonicScale
 from .models.scales import PentatonicScale
+from .models.scales.minorscale import MelodicMinorScale
 
 from .models.scales.exotic.wholetonescale import WholeToneScale
 from .models.scales.exotic.algerianscale import AlgerianScales

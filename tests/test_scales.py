@@ -1,4 +1,5 @@
 import pytest
+from musiclib.types.notesorder import NotesOrder
 from musiclib.types.scaletypes import ScaleTypes
 from musiclib.types.sounds import Sounds
 from .context import (
@@ -12,7 +13,8 @@ from .context import (
     MinorPentatonicScale,
     MajorPentatonicScale,
     PentatonicScale,
-    NaturalMinorScale
+    NaturalMinorScale,
+    MelodicMinorScale
 )
 
 
@@ -70,3 +72,21 @@ def test_major_pentatonic_scale_over_octave():
 def test_minor_pentatonic_scale_should_be_default():
     assert scale_comparator(MinorPentatonicScale(Sounds.E),
                             PentatonicScale(Sounds.E).get_scale_sounds())
+
+
+def test_melodic_minor_scale_ascending():
+    assert scale_comparator(MelodicMinorScale(
+        Sounds.E,
+        notes_order=NotesOrder.ASCENDING
+    ),
+        {Sounds.E, Sounds.FIS, Sounds.G,
+         Sounds.A, Sounds.B, Sounds.CIS, Sounds.DIS})
+
+
+def test_melodic_minor_scale_descending():
+    assert scale_comparator(MelodicMinorScale(
+        Sounds.E,
+        notes_order=NotesOrder.DESCENDING
+    ),
+        {Sounds.E, Sounds.FIS, Sounds.G,
+         Sounds.A, Sounds.B, Sounds.C, Sounds.D})

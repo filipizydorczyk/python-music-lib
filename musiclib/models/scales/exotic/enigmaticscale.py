@@ -20,7 +20,7 @@ class EnigmaticMajorScale(Scale):
     :link: https://chord.rocks/guitar/scales/c-enigmatic-descending
     """
 
-    def __init__(self, key: Sounds, notes_order=NotesOrder.ASCENDING) -> None:
+    def __init__(self, key: Sounds, notes_order: NotesOrder = NotesOrder.ASCENDING) -> None:
         """creates instance of enigmatic major scale for given key
 
         :param key: key of scale
