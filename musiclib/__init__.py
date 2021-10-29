@@ -19,6 +19,7 @@ from .models.chord import Chord
 from .models.scales.majorscale import MajorScale
 from .models.scales.minorscale import MinorScale
 from .models.scales.scale import Scale
+from .models.scales.pentatonicscale import MinorPentatonicScale
 
 from .models.scales.exotic.wholetonescale import WholeToneScale
 from .models.scales.exotic.algerianscale import AlgerianScales
