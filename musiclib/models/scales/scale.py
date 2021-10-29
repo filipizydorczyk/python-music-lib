@@ -1,4 +1,4 @@
-from typing import Dict, Set, List
+from typing import Set, List
 from musiclib.types.intervals import Intervals
 from musiclib.types.sounds import Sounds
 from musiclib.types.scaletypes import ScaleTypes
@@ -14,7 +14,7 @@ class Scale:
         :param key: key of scale
         :type key: Sounds
         """
-        self.__sounds: Dict[Sounds] = set([key])
+        self.__sounds: Set[Sounds] = set([key])
 
         current_note = key
         for interval in intervals:
