@@ -85,3 +85,10 @@ ScaleTypes
    :undoc-members:
    :show-inheritance:   
 
+ScaleTypes
+----------------------------
+
+.. automodule:: musiclib.types.drums
+   :members:
+   :undoc-members:
+   :show-inheritance:   
