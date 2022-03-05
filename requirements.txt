@@ -2,3 +2,4 @@ pytest
 mido
 insipid-sphinx-theme
 JACK-Client
+sphinx

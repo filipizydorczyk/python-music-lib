@@ -2,6 +2,8 @@
 
 ## Building
 
+To generate html docs u need to have sphinx installed too. Python dependencies was installed with `make init` but u will also need system package so that command in makefile works. To install it follow this [guide](https://www.sphinx-doc.org/en/master/usage/installation.html) and then
+
 ```
 cd docs
 make clean
