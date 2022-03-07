@@ -8,6 +8,7 @@ from .types.dynamics import Dynamics
 from .types.dynamics import Changes
 from .types.articulations import Articulations
 from .types.notesorder import NotesOrder
+from .types.chordprogressions import ChordProgressions
 
 
 # Models
@@ -23,6 +24,7 @@ from .models.scales.scale import Scale
 from .models.scales.pentatonicscale import MinorPentatonicScale
 from .models.scales.pentatonicscale import MajorPentatonicScale
 from .models.scales import PentatonicScale
+from .models.chordprogression import ChordProgression
 from .models.scales.minorscale import MelodicMinorScale
 from .models.scales.minorscale import HarmonicMinorScale
 
@@ -77,3 +79,7 @@ from .utils.chordsfactory import create
 # Clients
 
 from .clients.jack import MidiProcessJack
+
+# Exceptions
+
+from .models.chordprogression import ChordProgressionStringFormat
