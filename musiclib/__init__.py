@@ -73,7 +73,7 @@ from .collections.circleoffifths import CircleOfFifths
 # Utils
 
 from .utils.chordsfactory import create_chord_major
-from .utils.chordsfactory import create_minor_chord
+from .utils.chordsfactory import create_chord_minor
 from .utils.chordsfactory import create_chord
 
 # Clients
