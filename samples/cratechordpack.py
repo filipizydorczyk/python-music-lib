@@ -1,6 +1,6 @@
 from musiclib.models.pitch import Pitch
 from mido import Message, MidiFile, MidiTrack
-from musiclib import Sounds, create, Chords, Chord, Pitch
+from musiclib import Sounds, create_chord, Chords, Chord, Pitch
 
 
 def save_chord_to_midi(chord: Chord, chord_type: Chords):
@@ -30,5 +30,5 @@ def save_chord_to_midi(chord: Chord, chord_type: Chords):
 for chord_type in [Chords.MAJOR, Chords.MINOR]:
     for sound in Sounds:
         if sound != Sounds.REST:
-            chord = create(Pitch(sound, 4), chord_type)
+            chord = create_chord(Pitch(sound, 4), chord_type)
             save_chord_to_midi(chord, chord_type)
