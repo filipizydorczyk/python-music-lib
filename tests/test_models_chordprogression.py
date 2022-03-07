@@ -22,3 +22,8 @@ def test_should_create_with_predefined_enum():
     scale = MajorScale(Sounds.C)
     chord_progression = ChordProgression(scale, ChordProgressions.I_V_vi_IV)
     assert len(chord_progression.get_chords_list()) == 4
+
+def test_should_create_with_correctly_formated_string():
+    scale = MajorScale(Sounds.C)
+    chord_progression = ChordProgression(scale, "V-iii-IV-I")
+    assert len(chord_progression.get_chords_list()) == 4
