@@ -18,6 +18,11 @@ from .context import (
     HarmonicMinorScale
 )
 
+def test_get_scale_sounds_list():
+    assert len(MajorPentatonicScale(Sounds.C).get_scale_sounds_list()) == 5
+    assert len(MajorScale(Sounds.C).get_scale_sounds_list()) == 7
+    assert len(NaturalMinorScale(Sounds.C).get_scale_sounds_list()) == 7
+    assert len(MelodicMinorScale(Sounds.C).get_scale_sounds_list()) == 7
 
 def test_get_scale_type_method():
     assert IwatoScale(Sounds.C).get_scale_type() == ScaleTypes.PENTATONIC

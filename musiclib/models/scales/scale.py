@@ -32,6 +32,16 @@ class Scale:
         :rtype: Set[Sounds]
         """
         return self.__sounds.copy()
+        
+    def get_scale_sounds_list(self) -> List[Sounds]:
+        """returns list of sounds in created scale
+
+        :return: list of sounds in created scale. Returned
+            value is being created on function call so any changes
+            done on class instance will not affect returned list.
+        :rtype: List[Sounds]
+        """
+        return list(self.__sounds.copy())
 
     def get_scale_type(self) -> ScaleTypes:
         """get type of scale based on number of notes in it
