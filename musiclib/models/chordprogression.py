@@ -50,14 +50,11 @@ class ChordProgression:
         if type(progression) is ChordProgressions:
             progression_to_split = progression.value
 
-        print(progression_to_split)
-
         for chord in progression_to_split.split("-"):
             print(chord)
             mapping = None
             try:
                 mapping = number_to_chord_dictionary[chord]
-                print(mapping)
             except:
                 raise ChordProgressionStringFormat("Chord not found. Make sure string is formated correctly")
             self.__chords.append(
