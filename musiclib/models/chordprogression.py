@@ -7,7 +7,7 @@ from musiclib.types.chords import Chords
 from musiclib.models.chord import Chord
 from musiclib.models.scales.scale import Scale
 from musiclib.types.chordprogressions import ChordProgressions
-from musiclib.utils.chordsfactory import create
+from musiclib.utils.chordsfactory import create_chord
 
 number_to_chord_dictionary: Mapping[str,Tuple[int,Chords]] = {
     "I": (1, Chords.MAJOR),
@@ -58,7 +58,7 @@ class ChordProgression:
             except:
                 raise ChordProgressionStringFormat("Chord not found. Make sure string is formated correctly")
             self.__chords.append(
-                    create(
+                    create_chord(
                         scale.get_scale_sounds_list()[mapping[0] - 1],
                         mapping[1]
                         )

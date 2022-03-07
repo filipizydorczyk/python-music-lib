@@ -74,7 +74,7 @@ from .collections.circleoffifths import CircleOfFifths
 
 from .utils.chordsfactory import create_major_chord
 from .utils.chordsfactory import create_minor_chord
-from .utils.chordsfactory import create
+from .utils.chordsfactory import create_chord
 
 # Clients
 

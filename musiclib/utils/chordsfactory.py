@@ -29,7 +29,7 @@ def create_major_chord(pitch: Pitch) -> Chord:
     :return: major chord in one octave
     :rtype: Chord
     """
-    return create(pitch, Chords.MAJOR)
+    return create_chord(pitch, Chords.MAJOR)
 
 
 def create_minor_chord(pitch: Pitch) -> Chord:
@@ -40,10 +40,10 @@ def create_minor_chord(pitch: Pitch) -> Chord:
     :return: minor chord in one octave
     :rtype: Chord
     """
-    return create(pitch, Chords.MINOR)
+    return create_chord(pitch, Chords.MINOR)
 
 
-def create(pitch: Pitch, chord_type: Chords) -> Chord:
+def create_chord(pitch: Pitch, chord_type: Chords) -> Chord:
     """create chord of given pitch and type
 
     :param pitch: root pitch
