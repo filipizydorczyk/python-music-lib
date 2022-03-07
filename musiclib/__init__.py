@@ -75,6 +75,9 @@ from .collections.circleoffifths import CircleOfFifths
 from .utils.chordsfactory import create_chord_major
 from .utils.chordsfactory import create_chord_minor
 from .utils.chordsfactory import create_chord
+from .utils.chordprogressionsfactory import create_chordprogression
+from .utils.chordprogressionsfactory import create_chordprogression_list
+
 
 # Clients
 
