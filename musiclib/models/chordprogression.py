@@ -30,7 +30,15 @@ class ChordProgressionStringFormat(Exception):
 
 class ChordProgression:
     """This model keeps information about chord progression and usefull related methods.
+
+    For this class correctly formated progression string is crucial. Every string 
+    contains list of chords seperated by `-`. Every chord is described by roman numerals 
+    (I,II,IV etc...) which describe wich note of the scale is root of this chord. Chord 
+    can be uppercased or lowercased. Uppercased are major chords and lowercased are minor 
+    chords. For now it's really basic implementation and only these two types are 
+    implemented in future there will be more chords available. 
     """
+    
     def __init__(self, scale: Scale, progression: Union[str, ChordProgressions]):
         """Creates new instance of chord progression.
 
@@ -40,7 +48,7 @@ class ChordProgression:
             progressions in :enum:`~musiclib.types.chordprogressions.ChordProgressions` 
             or u can define own progression by passing string. String should be formatted 
             in correct way otherwise error will be raised. Example of valid progression string
-            is "I-V-vi-IV".
+            is "I-V-vi-IV". More explenation above
         :type progression: Union[str, ChordProgressions]
         """
         # TODO: Custom colletction for keeping chords
@@ -65,4 +73,9 @@ class ChordProgression:
                     )
 
     def get_chords_list(self) -> List[Chord]:
+        """get list of chords for given progression
+
+        :return: list of chords
+        :rtype: List[Chord]
+        """
         return self.__chords
