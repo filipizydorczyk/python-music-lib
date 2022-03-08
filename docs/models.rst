@@ -288,12 +288,20 @@ Yo Scales
 .. automodule:: musiclib.models.scales.exotic.yoscale
    :members:
    :undoc-members:
-   :show-inheritance:  
+   :show-inheritance: 
  
 WholeToneScale
 ***********************************************
    
 .. automodule:: musiclib.models.scales.exotic.wholetonescale
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   
+ChordProgression
+-----------------------------------------------
+   
+.. automodule:: musiclib.models.chordprogression
    :members:
    :undoc-members:
    :show-inheritance:

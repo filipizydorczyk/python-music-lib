@@ -83,12 +83,12 @@ ScaleTypes
 .. automodule:: musiclib.types.scaletypes
    :members:
    :undoc-members:
-   :show-inheritance:   
+   :show-inheritance: 
 
-ScaleTypes
+ChordProgressions
 ----------------------------
 
-.. automodule:: musiclib.types.drums
+.. automodule:: musiclib.types.chordprogressions
    :members:
    :undoc-members:
-   :show-inheritance:   
+   :show-inheritance: 

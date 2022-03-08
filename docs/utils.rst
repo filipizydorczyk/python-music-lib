@@ -14,8 +14,11 @@ Chords factory
    :undoc-members:
    :show-inheritance:
 
+Chord progressions factory
+----------------------------
 
-
-
-
-
+.. automodule:: musiclib.utils.chordprogressionsfactory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   
