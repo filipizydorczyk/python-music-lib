@@ -1,8 +1,13 @@
+from typing import List
+
+from musiclib.models.pitch import Pitch
+
+
 class Chord:
     """model representing chord
     """
 
-    def __init__(self, pitches: list, duration):
+    def __init__(self, pitches: List[Pitch], duration):
         """creates new instance of Chord
 
         :param pitches: list of chords Pitch'es
@@ -10,10 +15,10 @@ class Chord:
         :param duration: it can be either float or notedurations enum. Object will store this information as float
         :type duration: NoteDurations or float
         """
-        self.__pitches = pitches
+        self.__pitches: List[Pitch] = pitches
         self.__duration = duration
 
-    def get_pitches(self) -> list:
+    def get_pitches(self) -> List[Pitch]:
         """get Pitch'es list of chord
 
         :return: list of Pitch elements
